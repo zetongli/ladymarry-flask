@@ -1,0 +1,15 @@
+Flask
+Flask-Assets
+Flask-Login
+Flask-Mail
+Flask-Principal
+Flask-SQLAlchemy
+Flask-Script
+Flask-Security
+Flask-WTF
+Jinja2
+Werkzeug
+mock
+celery
+python-dateutil
+simplejson

@@ -28,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  config.vm.network "public_network"
+  # config.vm.network "public_network"
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -138,9 +138,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       sh.inline = <<-EOF
       sudo apt-get update
 
+      # Config MySQL.
+      mysql -u root -e "CREATE USER 'admin'@'localhost' IDENTIFIED BY ''; GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;"
+      sudo /etc/init.d/mysql restart
+
       # Install python dependencies. Python mysqldb sucks, we should install it
       # in this way.
       sudo apt-get -y install python-mysqldb
+
+      sudo pip install -r /home/vagrant/ladymarry-flask/requirements.txt
+
       # Personal config.
       sudo apt-get -y install vim
       sudo apt-get -y install fish
