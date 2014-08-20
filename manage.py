@@ -6,6 +6,8 @@ from ladymarry.manage import *
 manager = Manager(create_app())
 manager.add_command('create_db', CreateDBCommand())
 manager.add_command('drop_db', DropDBCommand())
+manager.add_command('clear_db', ClearDBCommand())
+manager.add_command('seed_db', SeedDBCommand())
 
 manager.add_command('create_task', CreateTaskCommand())
 manager.add_command('list_task', ListTaskCommand())
