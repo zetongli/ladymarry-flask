@@ -140,6 +140,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       # Config MySQL.
       mysql -u root -e "CREATE USER 'admin'@'localhost' IDENTIFIED BY ''; GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;"
+      mysql -u root -e "create database ladymarry"
       sudo /etc/init.d/mysql restart
 
       # Install python dependencies. Python mysqldb sucks, we should install it

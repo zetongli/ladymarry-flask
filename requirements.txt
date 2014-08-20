@@ -13,3 +13,4 @@ mock
 celery
 python-dateutil
 simplejson
+redis
