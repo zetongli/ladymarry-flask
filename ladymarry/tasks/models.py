@@ -29,10 +29,10 @@ TaskCategory.addAlias('Catering & Cake', 'CateringAndCake')
 TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
 
 
-related_tasks = db.Table(
-    'related_tasks',
-    db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
-    db.Column('related_task_id', db.Integer(), db.ForeignKey('tasks.id')))
+# related_tasks = db.Table(
+#     'related_tasks',
+#     db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
+#     db.Column('related_task_id', db.Integer(), db.ForeignKey('tasks.id')))
 
 
 class TaskJsonSerializer(JsonSerializer):
@@ -56,11 +56,11 @@ class Task(TaskJsonSerializer, db.Model):
     tutorial = db.Column(db.Text())
     resource = db.Column(db.Text())
     image = db.Column(db.String(255))
-    related_tasks = db.relationship(
-        'Task',
-        secondary=related_tasks,
-        primaryjoin=id==related_tasks.c.task_id,
-        secondaryjoin=id==related_tasks.c.related_task_id,
-        backref=db.backref('prev_related_tasks', lazy='dynamic'),
-        lazy='dynamic')
+    # related_tasks = db.relationship(
+    #     'Task',
+    #     secondary=related_tasks,
+    #     primaryjoin=id==related_tasks.c.task_id,
+    #     secondaryjoin=id==related_tasks.c.related_task_id,
+    #     backref=db.backref('prev_related_tasks', lazy='dynamic'),
+    #     lazy='dynamic')
     

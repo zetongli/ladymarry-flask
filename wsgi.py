@@ -3,9 +3,7 @@ from werkzeug.wsgi import DispatcherMiddleware
 
 from ladymarry import api
 
-application = DispatcherMiddleware(frontend.create_app(), {
-    '/api': api.create_app()
-})
+application = DispatcherMiddleware(api.create_app())
 
 
 if __name__ == "__main__":

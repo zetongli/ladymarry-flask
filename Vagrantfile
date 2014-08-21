@@ -152,6 +152,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # Personal config.
       sudo apt-get -y install vim
       sudo apt-get -y install fish
+      sudo apt-get -y install curl
 
       EOF
   end

@@ -32,7 +32,10 @@ class SeedDBCommand(Command):
             for row in reader:
                 if num > 0:
                     task = tasks.create(
-                        category=row[0], title=row[1], task_date=row[2])
+                        category=row[0],
+                        title=row[1],
+                        task_date=row[2],
+                        description=row[3])
                 num += 1
 
             print 'Created %d tasks successfully.' % num
