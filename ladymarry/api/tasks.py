@@ -6,7 +6,7 @@ from ..services import tasks
 from . import route
 
 
-bp = Blueprint('tasks', __name__, url_prefix='/api/tasks')
+bp = Blueprint('tasks', __name__, url_prefix='/tasks')
 
 
 @route(bp, '/')
