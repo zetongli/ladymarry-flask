@@ -1,3 +1,5 @@
 *.pyc
 .vagrant/*
 .DS_Store
+
+ladymarry/fontend/wedding-checklist-fe/app

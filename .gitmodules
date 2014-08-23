@@ -16,3 +16,9 @@
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "cookbooks/nodejs"]
+	path = cookbooks/nodejs
+	url = https://github.com/mdxp/nodejs-cookbook.git
+[submodule "ladymarry/frontend/wedding-checklist-fe"]
+	path = ladymarry/frontend/wedding-checklist-fe
+	url = https://github.com/fotavo/wedding-checklist-fe.git

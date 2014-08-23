@@ -123,13 +123,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.add_recipe "mysql"
       chef.add_recipe "mysql::server"
       chef.add_recipe "python"
+      chef.add_recipe "nodejs"
 
       chef.json = {
+          "nodejs" => {
+              "version" => "0.10.26",
+              "install_method" => "source",
+              "npm" => "1.4.6"
+          },
           "mysql" => {
               "server_root_password" => '',
               "server_repl_password" => '',
               "server_debian_password" => ''
-    }
+          }
       }
   end
 
@@ -148,6 +154,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       sudo apt-get -y install python-mysqldb
 
       sudo pip install -r /home/vagrant/ladymarry-flask/requirements.txt
+
+      # Config nodejs.
+      sudo npm install -g npm
+      sudo npm config set registry http://registry.npmjs.org/
+      sudo npm install -g gulp
+      cd /home/vagrant/ladymarry-flask/ladymarry/frontend/wedding-checklist-fe
+      sudo npm install
 
       # Personal config.
       sudo apt-get -y install vim
