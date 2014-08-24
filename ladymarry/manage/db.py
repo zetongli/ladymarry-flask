@@ -41,4 +41,16 @@ class SeedDBCommand(Command):
                         image=row[7])
                 num += 1
 
+            # Set up related tasks.
+            f.seek(0)
+            k = 0
+            for row in reader:
+                if k > 0 and row[6]:
+                    related_task_rows = row[6].split(',')
+                    task = tasks.get(k)
+                    for r in related_task_rows:
+                        task.related_tasks.append(tasks.get(int(r.strip()) - 1))
+                    tasks.save(task)
+                k += 1
+
             print 'Created %d tasks successfully.' % num

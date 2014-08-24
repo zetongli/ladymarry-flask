@@ -19,6 +19,11 @@ def get_all():
 def get_single(task_id):
     return tasks.get_or_404(task_id)
 
+@route(bp, '/<task_id>/related_tasks')
+def get_related_tasks(task_id):
+    task = tasks.get_or_404(task_id)
+    return task.related_tasks.all()
+
 @route(bp, '/<task_id>', methods=['PUT'])
 def update(task_id):
     # TODO: Verify params.
