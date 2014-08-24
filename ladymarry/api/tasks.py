@@ -11,10 +11,9 @@ bp = Blueprint('tasks', __name__, url_prefix='/tasks')
 
 @route(bp, '/')
 def get_all():
-    since = request.args.get('since', None)
-    to = request.args.get('to', None)
-
-    return tasks.find_between_date(since, to)
+    """Returns all the tasks order by task_date and category. """
+    model = tasks.__model__
+    return model.query.order_by(model.task_date).order_by(model.category).all()
 
 @route(bp, '/<task_id>')
 def get_single(task_id):

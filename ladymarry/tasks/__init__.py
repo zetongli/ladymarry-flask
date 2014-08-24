@@ -1,5 +1,3 @@
-from dateutil import parser
-
 from flask import abort
 
 from ..core import Service
@@ -8,20 +6,6 @@ from .models import Task, TaskStatus, TaskCategory
 
 class TasksService(Service):
     __model__ = Task
-
-    def find_between_date(self, since=None, to=None):
-        """Returns tasks whose date is between `since` and `to`. """
-        query = Task.query
-        try:
-            if since:
-                since = parser.parse(since)
-                query = query.filter(Task.task_date >= since)
-            if to:
-                to = parser.parse(to)
-                query = query.filter(Task.task_date <= to)
-            return query.all()
-        except TypeError:
-            abort(404)
 
     def _preprocess_params(self, kwargs):
         """Override _preprocess_params to change enum string to int and
