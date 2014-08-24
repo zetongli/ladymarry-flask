@@ -1,102 +1,161 @@
-Category (required),Title (required),Date (required),Description,Tutorial,Resource (separate by comma),Related tasks (row number separated by comma),Image
-Overall,Designate an email folder,1/1/2015,,,,,
-Overall,Decide on city and season.,1/1/2015,,,,,
-Overall,Choose bridal party,1/1/2015,,,,,
-Overall,Find wedding planners.,1/1/2015,,,,,
-Overall,Hire your wedding planner.,2/1/2015,,,,,
-Overall,Decide on a budget.,2/1/2015,,,,,
-Overall,Decide on wedding colors,2/1/2015,,,,,
-Overall,Pick the date,3/1/2015,,,,,
-Overall,Annouce your wedding,4/1/2015,,,,,
+Category (required),Title (required),Date (required),Description,Tutorial (How-to),Resource (separate by comma),Related tasks (row number separated by comma),Image
+Overall,Designate an email folder,1/1/2015,"Beside a to-do list, most of your communication with your wedding party and professionals happen through emails. Free yourself from the heavy paper folders and you can easily find any wedding details in your inbox later","1. Name folders by service categories
+2. Drag emails to different folders
+3. Keep updated with things",,,http://weddinginvitations21.com/wp-content/uploads/2011/03/Send-Wedding-Invitations-Through-Email-1.jpg
+Overall,Decide on city and season.,1/1/2015,The first question everyone will ask you when they hear you're engaged is where and when is the wedding. So talk it out: destination wedding or someplace local? Fall or spring?,"Step #1: Take the weather into account.
+
+Step #2: Consider all the factors of an off-season date.
+
+Step #3: Lead the date selection process by creating a list of what you envision for your wedding day.
+
+Step #4: Think twice before getting married on a major holiday.
+
+Step #5: Focus on what you want your wedding day to be and how to portray that in a date.
+
+Step #6: Give yourself plenty of time and don't rush it!
+
+Step #7: Think about other aspects of your wedding and how they will all play out.",http://www.huffingtonpost.com/2014/02/10/wedding-date-planning-_n_4746723.html," 7,9,27,28",http://i.huffpost.com/gen/1609387/thumbs/o-BG3-570.jpg?6
+Overall,Choose wedding party,1/1/2015,"Now it's time to start choosing your wedding party (groan...). In theory, this should be an exciting task -- a chance to round up your very favorite people to surround you on the happiest day of your life. But the reality is, you can't choose everyone, and between your siblings, your cousins, your childhood friends, your high school besties and your college roommates, you're going to need to make some cuts. So how do you narrow it down to the right handful of people -- the ones that will make things easy and fun, not the ones who will stress you out and wear you down?","DO wait to ask until you've set your wedding date. If you get engaged today but wait 18 months to get married, your inner circle might change. I'm not saying you won't still be tight with, say, your college roommate, but adding bridesmaids is a lot more fun then demoting them, so I'd hold out on asking 'til you're sure of who you'll want in the V.I.P. spots when your wedding day rolls around.
+
+DON'T feel like you have to include all the siblings. (Or give them the ""biggest"" roles.) Having the same parents and once sharing a bedroom makes your sister, well, your sister. It doesn't automatically make her your maid of honor. By all means, ask your sister to be your MoH if you're close. But don't feel like you have to ask her if all you have in common is DNA. And definitely don't feel like you have to ask your groom's sister to be a bridesmaid. Which brings me to ...
+
+DO have ""bridesmen"" and ""groomsgirls""! If you're close with your brother, that's great. But asking him to stand up as a groomsmen feels weird—unless he he happens to be close with your guy, too. If you'd like to give your bro an important role, I think ""bridesman"" or ""man of honor"" is more appropriate.
+
+DON'T feel like you have to have the same number of bridesmaids and groomsmen. I just don't get some brides' obsession with having even numbers. You can shuffle the way people walk up the aisle (two bridesmaids to a groomsman or vice versa), or stand during the ceremony. And you can skip the ""wedding party join in!"" portion of your first dance—which I always found a little awkward as a bridesmaid, anyway!
+
+DO redefine the roles. A ""maid of honor"" and ""matron of honor"" is great—unless you have two best friends and neither (or both) is married. If you want to have two ""maids"" or two ""matrons"" or no one ""of honor,"" just four equally ranked bridesmaids, do what works for you.
+
+
+DON'T ask a friend just because you were in her wedding. Your friend didn't ask you to be in her wedding because she hopes to be in yours—whenever that might happen. You might want to include more family members or just keep your wedding party small. Whatever the reason, don't assume your friend (especially one you've grown apart from) expects to be in your wedding. Or wants to, for that matter.",http://www.glamour.com/weddings/blogs/save-the-date/2012/02/6-dos-and-donts-that-will-hope,"15,19,20,41,42",http://www.fotavo.com/photos/phototmv57MZOa9p3RrEzDlJu6Wsodgf4PBj1HKcQky0x
+Overall,Find wedding planners.,1/1/2015,"It's not required but consider hiring one if you: want a destination wedding, have a busy job, or like the idea of a third person (expert) opinion. Sound like you? Research and set up interviews.","1. “How do you communicate with clients?”
+2. “How many clients do you have in a year, and in my wedding month?”
+3. “Do you work alone or with a team?”
+4. “What happens in the case of an emergency?”
+5. “What additional fees do I need to know about?”",http://www.huffingtonpost.com/2012/06/14/wedding-planning_n_1597953.html,"6,15",http://michellewein.files.wordpress.com/2012/04/wedding20planner.jpg
+Overall,Hire your wedding planner.,2/1/2015,"Finish interviewing your top picks, and then make a decision. Your planner's personality and how well you work together should be key. Once you decide, sign the contract and put down a deposit.","1. Review contract and timeline
+2. Insurance coverage
+3. Rehearsal and other parties",What's the difference between a venue coordinator and event coordinator?,15,http://michellewein.files.wordpress.com/2012/04/wedding20planner.jpg
+Overall,Decide on a budget.,2/1/2015,"Talk about who will pay for what. You might cover the entire thing or maybe your families will each commit a dollar amount. Just whatever you do, don't spend one dollar until you have a budget.","A sample budget breakdown: 
+Reception (Food, Beverages, Rentals, and Site) 40% 
+Flowers 5-10%
+Photography/Videography 15% 
+Bride's and Groom's attire 10%
+Music 5%
+Planner or Coordinator 10-15%
+Miscellaneous (Invitations, Officiant Fees, Favors, Etc.) 10%
+Cushion 5%",http://jennlanedesign.com/wedding-budget-calculator.php    http://www.brides.com/wedding-answers-tools/wedding-timeline-budget,May I say everything? ,http://thepeachpost.files.wordpress.com/2013/01/budget.jpg
+Overall,Decide on wedding colors/theme,2/1/2015,Romantic wedding? Think pastels and neutrals. A high-energy party? Go bold. Save your favorite colors to your planner so that we can start showing you more photos that match your palette.,"1.Use your favorite shade. You’ve been in love with pale lavender since the first grade, so this is a good place to begin – with what you love. You can tastefully incorporate any color into your wedding decorations by selecting the right hue, and combining it with the right accents.
+2.Consider the setting. Look at the colors used in your venue’s carpeting, drapery and decorations. If the site has strong colors, you’ll need to select a color scheme that complements. If you already have your heart set on a certain color, you may need to select a more neutrally decorated site but this needs to be sorted out very early on or you may miss out on a good location! However, keep an open mind about colors until you've chosen the venue, because the setting may well suggest the color scheme for you.
+3.Be prepared to have two different/distinct color themes if your church or wedding building and reception venue are very different in tone. In general, it is probable that you will have more leeway to use colors with the reception than where the wedding ceremony itself is held. However, you can still carry the color theme in clothing and flowers from the place of marriage to the reception, even if you can't decorate the church, town hall, or register office as much as you'd like.
+4.Enlist your favorite bloom. If sunflowers are your thing, there’s no reason why they shouldn’t make it into your décor scheme. Incorporate your predominant flower color – either making it the dominant shade or using it as an accent – and it will all come together.
+","www.fotavo.com/homepage, http://wedding.theknot.com/wedding-themes.aspx,http://www.magnetstreet.com/wedding-style-quiz","28,40,90",http://www.fotavo.com/photos/photoxhpd4mHnoEXU5QwVOgNR6v9jSCJLbFraT0fY1KtG
+Overall,Pick the date,3/1/2015,Choose a date both practical and personal.,"1. Check with the top-tier guests
+2. Check with venues and your most important service professionals
+3. Double check the no-no days, i.e. the weekend before tax day",http://www.weddingpartyapp.com/blog/2014/01/02/5-tips-choosing-wedding-theme-real-bride/,"29,30,61,66",http://www.fotavo.com/photos/photovBF0lOUNi7LQosdMe84ECwu2t5f9PrVgHSc6DAZk
+Overall,Annouce your wedding,4/1/2015,"Decide whether you want to send a photo and announcement to your hometown paper. You could also reinvent the idea and make a cute video to share with friends and family. Whether you had a destination wedding, a small wedding, or you have family and friends who do not live near you, it is likely that some people you know couldn't be on your guest list.",,http://www.nytimes.com/ref/fashion/weddings/howtosubmitwedding.html,,http://2.bp.blogspot.com/-76T8mQnKOgo/Too4FG4XoNI/AAAAAAAABAs/NdUBf2y4rUQ/s1600/Wedding+Announcements+For+People+In+love+014.JPG
 Overall,Decide on your plan B,6/1/2015,,,,,
-Overall,Get marriage license.,11/1/2015,,,,,
-Overall,Confirm final payments.,11/1/2015,,,,,
-Overall,Make a day-of timeline.,12/1/2015,,,,,
-Overall,Confirm timeline and delegate to wedding party.,12/1/2015,,,,,
-Overall,Review your pros,12/1/2015,,,,,
-Overall,Submit your wedding.,12/1/2015,,,,,
-Parties & Entertainment,Set engagement party date.,2/1/2015,,,,,
+Overall,Get marriage license.,11/1/2015,"Before you head down to the clerk's office, check out their website. Most counties won't let you apply for your marriage license more than a week or two before the wedding day.",,,,
+Overall,Confirm final payments.,11/1/2015,"Make sure you're all paid up with your vendors (that, or you have an agreement as to when the final payments will come in). You don't want it hanging over your head on the honeymoon!",,,,
+Overall,Make a day-of timeline.,12/1/2015,This is critical especially if you don't have a wedding planner to do it for you. Take your time and be thorough with the details. Then send it out to the bridal party and make lots of extra copies!,,,,
+Overall,Confirm timeline and delegation,12/1/2015,"Get them together in person and go through everything, or send them and email (and make sure they've read it!). This is also the time to confirm any VIP toasts.",,,,
+Overall,Review your pros,12/1/2015,Obsessed with the way your cake turned out? Couldn't have done it without your planner? Rate your wedding vendors so that other brides know who to hire.,,,,
+Overall,Share your wedding,12/1/2015,"Once you get your wedding photos back, share them. Upload them to TheKnot.com, tag your vendors and get featured!",,,,
+Parties & Entertainment,Set engagement party date.,2/1/2015,Not everyone has one. Traditionally the bride's parents host but anyone can throw it for you. And it can be as formal or casual as you want -- have it at a restaurant or even your parents backyard. At this point you'll want to set a date and draft the guest list.,,,,
 Parties & Entertainment,Plan the shower,4/1/2015,,,,,
-Parties & Entertainment,Plan the rehearsal dinner.,6/1/2015,,,,,
-Parties & Entertainment,Book rehearsal meal,7/1/2015,,,,,
-Parties & Entertainment,Take dance lessons,8/1/2015,,,,,
-Parties & Entertainment,Mail rehearsal invites.,11/1/2015,,,,,
-Parties & Entertainment,Plan a welcome party.,11/1/2015,,,,,
-Parties & Entertainment,Have your rehearsal,12/1/2015,,,,,
+Parties & Entertainment,Plan the rehearsal dinner.,6/1/2015,Laid-back and casual? Or more formal? Look for rehearsal dinner sites in your area and provide the host with contact information for your attendants and any other guests.,,,,
+Parties & Entertainment,Book rehearsal meal,7/1/2015,"Secure the venue and then firm up the details for the evening. That includes the menu, guest list and any special activities the host is planning.",,,,
+Parties & Entertainment,Take dance lessons,8/1/2015,"If you dread the idea of all eyes on you during the first dance, you might want to consider dance lessons. (Also makes for a fun date night in the midst of all the planning!)",,,,
+Parties & Entertainment,Mail rehearsal invites.,11/1/2015,"If you haven’t already, now is the time to send out all the rehearsal dinner details. Have guests RSVP to the host at least a week before the wedding so you can give the venue a final count.",,,,
+Parties & Entertainment,Plan a welcome party.,11/1/2015,"It’s not at all required but if you’re going to have one, it’s time to start planning the menu and details. A welcome party is hands-down a great way to get all your guests mixing and mingling early!",,,,
+Parties & Entertainment,Have your rehearsal,12/1/2015,"Because you might not have time for it on the wedding day (it oftentimes feels like a blur), use this time to really catch up with everyone and welcome friends and family.",,,,
 Parties & Entertainment,Have welcome party,12/1/2015,,,,,
-Venue,Visit reception venues.,2/1/2015,,,,,
-Venue,Visit ceremony sites,2/1/2015,,,,,
-Venue,Book your reception venue,3/1/2015,,,,,
-Venue,Book your ceremony site,3/1/2015,,,,,
-Venue,Book wedding night hotel room.,7/1/2015,,,,,
+Venue,Visit ceremony sites,2/1/2015,"If you belong to a house of worship, ask about open dates and pricing. If that’s not the case, then start your search right here. Find a few places you like, and then schedule time to take a tour.",,,,
+Venue,Visit reception venues,2/1/2015,"Start your search online -- look at photos and read reviews. Then, narrow it down to a handful of your favorites and call to set up site tours. When you're there, ask lots of questions.",,,,
+Venue,Book your reception venue,3/1/2015,"This is a biggie! First, request a contract. Then read through it very carefully. If you have questions, ask. You should be absolutely comfortable with the contract before you sign the dotted line",,,,
+Venue,Book your ceremony site,3/1/2015,"If it’s a non-religious space, request a contract and put down a deposit. Now is also the time to find out about marriage license requirements (so that you have time to gather necessary documents).",,,,
+Venue,Book wedding night hotel room.,7/1/2015,"When you call to make a reservation, be sure to mention that you're booking the room for your wedding night. You might get a free upgrade.",,,,
 Fashion & Beauty,Save dress photos!,1/1/2015,,,,,
-Fashion & Beauty,Try on wedding dresses.,2/1/2015,,,,,
-Fashion & Beauty,Insure your ring.,2/1/2015,,,,,
-Fashion & Beauty,Make a beauty plan,2/1/2015,,,,,
+Fashion & Beauty,Try on wedding dresses.,2/1/2015,It's time to try on those styles you've been saving to your board! So grab your mom or best friend and make appointments at several stores. And give yourselves at least two hours at each store.,,,,
+Fashion & Beauty,Insure your ring.,2/1/2015,"Putting a policy on your engagement ring may sound unromantic, but the peace of mind is probably worth it. There are few different ways to do it, so read up below!",,,,
+Fashion & Beauty,Make a beauty plan,2/1/2015,Get serious about your skincare (if you aren't already) by starting a good regimen. And put together a fitness plan. A few sessions with a trainer can really help jump-start your routine.,,,,
 Fashion & Beauty,Try on wedding dresses.,3/1/2015,,,,,
 Fashion & Beauty,Try on wedding dresses.,4/1/2015,,,,,
 Fashion & Beauty,Try on wedding dresses.,5/1/2015,,,,,
-Fashion & Beauty,Save hairstyle photos,5/1/2015,,,,,
-Fashion & Beauty,Buy your dresses,6/1/2015,,,,,
-Fashion & Beauty,Choose bridesmaid dresses.,7/1/2015,,,,,
-Fashion & Beauty,Choose attires,7/1/2015,,,,,
-Fashion & Beauty,Find beauty stylists,8/1/2015,,,,,
+Fashion & Beauty,Save hairstyle photos,5/1/2015,"When you envision yourself on wedding day, what do you see? Save hair and makeup ideas to your planner -- pick a variety of options to show your hairstylist and makeup artist during your trials.",,,,
+Fashion & Beauty,Buy your dresses,6/1/2015,"You want to give yourself plenty of time to order the dress and then to have alterations and fitting appointments. Once you buy it, you’ll also want to schedule time for your first dress fitting.",,,,
+Fashion & Beauty,Choose bridesmaid dresses.,7/1/2015,"Once you have a good idea as to how you want them to look, take one or all of your bridesmaids dress shopping. Then make your pick!",,,,
+Fashion & Beauty,Choose attires,7/1/2015,"Tuxedos or suits? Decide what you want the guys to wear and how you want them to look. Hint: Usually time, place, and formality are the driving forces behind your choice.",,,,
+Fashion & Beauty,Find beauty stylists,8/1/2015,"You obviously want your hair to look impeccable. Find a few hairstylists you think you like, and then schedule trials with them so that you can be absolutely sure you’ve chosen the right person.Maybe you found someone to do both hair and makeup. In many cases though, these two different people. Do your homework and then schedule a couple makeup trials to find someone you like.",,,,
 Fashion & Beauty,Buy or rent formalwear.,8/1/2015,,,,,
-Fashion & Beauty,Shop for wedding rings.,9/1/2015,,,,,
-Fashion & Beauty,Order your wedding rings.,9/1/2015,,,,,
-Fashion & Beauty,Have your first fitting.,9/1/2015,,,,,
-Fashion & Beauty,Buy dress essentials (for under the dress).,10/1/2015,,,,,
-Fashion & Beauty,"Buy formalwear extras (like pocket squares, bow ties, and ties)",10/1/2015,,,,,
-Fashion & Beauty,Have your hair trial.,10/1/2015,,,,,
-Fashion & Beauty,Buy dress accessories.,11/1/2015,,,,,
-Fashion & Beauty,Have a last dress fitting.,11/1/2015,,,,,
-Guest & Guestlist,Start your guest list.,1/1/2015,,,,,
-Guest & Guestlist,Start a wedding website (free),1/1/2015,,,,,
+Fashion & Beauty,Shop for wedding rings.,9/1/2015,"Look through our gallery, visit jewelry stores, and ask friends for recommendations. You'll want to give yourselves a couple months to browse, research price and revisit rings that catch your eye.",,,,
+Fashion & Beauty,Order your wedding rings.,9/1/2015,"Now that you've shopped around and done your homework, it's time to order your wedding rings. Want to really personalize it? Engrave the inside with a meaningful phrase or your wedding date.",,,,
+Fashion & Beauty,Have your first fitting.,9/1/2015,It's a good idea to bring one person (your mom or a friend) along with you for this. That way they can weigh in on how the dress fits you and make you feel more comfortable during the appointment.,,,,
+Fashion & Beauty,Buy dress essentials (for under the dress).,10/1/2015,What you wear under the dress is almost just as important to looking good as the gown itself. Ideally you’ll want to buy before your first fitting.,,,,
+Fashion & Beauty,"Buy formalwear extras (like pocket squares, bow ties, and ties)",10/1/2015,The type of formalwear usually dictates the accessories -- but this is the place to show some style. Find a tie that sets him apart from the and splurge on a great pair of dress shoes.,,,,
+Fashion & Beauty,Have your hair trial.,10/1/2015,Have a final hair trial with your stylist. Don’t forget to bring your wedding veil to make sure it works with your style. You should also finalize your wedding day beauty appointments now.,,,,
+Fashion & Beauty,Buy dress accessories.,11/1/2015,The right jewelry and shoes completes the look. So figure out how you want to finish off your look and then buy it before your final dress fitting.,,,,
+Fashion & Beauty,Have a last dress fitting.,11/1/2015,"Have Your Last Dress Fitting There might be some butterflies at this appointment. It's totally normal! At this point, your dress should fit you nice and tight and all of your accessories should look just right.",,,,
+Guest & Guestlist,Start your guest list.,1/1/2015,"Use our guest list manager to do this. Start with immediate family and friends, then move on to the rest of the invitees in order of importance. (Sounds harsh but it's the best way to keep organized.)",,,,
+Guest & Guestlist,Start a wedding website (free),1/1/2015,You don't have to be a genius to make one. It's super simple. Start by adding the story of how you met and got engaged. The other essential info like venue details and hotels can come later.,,,,
 Guest & Guestlist,Make guest list,2/1/2015,,,,,
 Guest & Guestlist,Make guest list,3/1/2015,,,,,
-Guest & Guestlist,Finalize your guest list.,4/1/2015,,,,,
-Guest & Guestlist,Register for gifts.,4/1/2015,,,,,
-Guest & Guestlist,Block out hotel rooms,5/1/2015,,,,,
-Guest & Guestlist,Order save-the-dates.,6/1/2015,,,,,
+Guest & Guestlist,Save invitation photos.,3/1/2015,Find gorgeous invitation photos (search by color and style) in our gallery and save all of your favorites to your planner so that you can start to get an idea as to how you want your invites to look.,,,,
+Guest & Guestlist,Finalize your guest list.,4/1/2015,Finish up those family negotiations and finalize that guest list. Need help making the list of your VIPs? Read our expert advice for deciding who should make the final wedding guest list cut.,,,,
+Guest & Guestlist,Register for gifts.,4/1/2015,You don't have to finish your registry list all in one day. Take your time but start now. And make sure you add all your registry links to your wedding website so guests know where you’re registered!,,,,
+Guest & Guestlist,Save invitation photos.,4/1/2015,Find gorgeous invitation photos (search by color and style) in our gallery and save all of your favorites to your planner so that you can start to get an idea as to how you want your invites to look.,,,,
+Guest & Guestlist,Block out hotel rooms,5/1/2015,"You might want to start with fewer rooms and then add more if needed (some hotels require you to pay for rooms that go un-booked). Also, don’t forget to add hotel contact info to your wedding website!",,,,
+Guest & Guestlist,Save invitation photos.,5/1/2015,Find gorgeous invitation photos (search by color and style) in our gallery and save all of your favorites to your planner so that you can start to get an idea as to how you want your invites to look.,,,,
+Guest & Guestlist,Order your invitations.,5/1/2015,Make your final design picks and order those invites. You’ll finalize the wording at this time too. Also think about how you want to address them (calligraphy?) and don’t forget the stamps!,,,,
+Guest & Guestlist,Order save-the-dates.,6/1/2015,"If you have a designer in mind (local or online), now is the time to order. Going the DIY route? Buy the supplies and start working. You'll want to mail them between six and eight months beforehand.",,,,
 Guest & Guestlist,Find stationery designers.,6/1/2015,,,,,
-Guest & Guestlist,Send save-the-dates.,7/1/2015,,,,,
-Guest & Guestlist,Book a calligrapher,7/1/2015,,,,,
-Guest & Guestlist,Address your invitations.,8/1/2015,,,,,
-Guest & Guestlist,Mail your invites!,9/1/2015,,,,,
-Guest & Guestlist,Figure out transportation,9/1/2015,,,,,
-Guest & Guestlist,Get a guest book.,9/1/2015,,,,,
-Guest & Guestlist,Buy wedding favors.,10/1/2015,,,,,
+Guest & Guestlist,Send save-the-dates.,7/1/2015,This is one of those milestones that makes the planning you've done so far feel really real! Get them out by the six month mark (more like eight months if you have a lot of out-of-town guests).,,,,
+Guest & Guestlist,Book a calligrapher,7/1/2015,"Not everyone uses one, but if you can afford it, you'll save yourself a lot of time (and your envelopes will look amazing). Find calligrapher recs online and ask nearby stationery designers for ideas.",,,,
+Guest & Guestlist,Address your invitations.,8/1/2015,"Once you have them in hand, you may have a few more steps still to go. Address the envelopes (or get them to your calligrapher), and then package them up. Host an invite-stuffing party if it helps!",,,,
+Guest & Guestlist,Mail your invites,9/1/2015,"Get them out by the three-month mark. If you don't want the post office to add a giant stamp across the front of the envelope, you can ask to have them hand-canceled.",,,,
+Guest & Guestlist,Figure out transportation,9/1/2015,"Consider both luxuries (such as limos for you and your families) and essentials (for example, parking). Then outline what it is you need, do your research, and narrow down your options.",,,,
+Guest & Guestlist,Get a guest book.,9/1/2015,"You could go the traditional route and get a blank book or you could get really unique here. Look through our gallery of ideas and get the supplies you need to make it, or buy it in The Knot Shop.",,,,
+Guest & Guestlist,Buy wedding favors.,10/1/2015,"If you’re making them, start working on them. This is also the time to order any packaging supplies. (Hint: The Knot Shop has some really cute favors and favor packaging supplies.)",,,,https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ0mA5MC8xiVRzT9KwFA5gDq0K-NXek78LMrqRqu3ttMDIIEoYXlg
 Guest & Guestlist,Save program photos to your planner.,10/1/2015,,,,,
-Guest & Guestlist,Finish ceremony programs.,10/1/2015,,,,,
-Guest & Guestlist,Buy wedding party gifts.,11/1/2015,,,,,
-Guest & Guestlist,Send shower thank-yous.,11/1/2015,,,,,
+Guest & Guestlist,Finish ceremony programs.,10/1/2015,"If you're making them yourselves, have a few friends over and finish them up. If you ordered them, get them in hand and assembled. You're getting close!",,,,
+Guest & Guestlist,Buy wedding party gifts.,11/1/2015,"If the gifts don't already come packaged, think about how you want them to look when you give them out. Also decide when you're going to give them out (the rehearsal dinner is a popular option).",,,,
+Guest & Guestlist,Send shower thank-yous.,11/1/2015,You're going to have a lot of these to write so it's a good idea to get the bridal shower thank-yous done quickly. That way they don't start to overlap with any gifts you get for your wedding.,,,,
 Guest & Guestlist,Confirm guests,11/1/2015,,,,,
-Guest & Guestlist,Work on seating,11/1/2015,,,,,
-Guest & Guestlist,Work on escort cards.,12/1/2015,,,,,
-Guest & Guestlist,Finish thank-you notes.,12/1/2015,,,,,
-Photography & Videography,Find photographers.,2/1/2015,,,,,
-Photography & Videography,Book your photographer.,2/1/2015,,,,,
-Photography & Videography,Take engagement photos.,3/1/2015,,,,,
-Photography & Videography,Find videographers.,6/1/2015,,,,,
+Guest & Guestlist,Work on seating,11/1/2015,"The RSVPs should have started rolling (if they don't, pick up the phone). And because seating assignments isn’t exactly an easy task, read our survival tips and get started early.",,,,
+Guest & Guestlist,Work on escort cards.,12/1/2015,"If you ordered escort cards, it's time to pick them up and organize them. If you're doing the DIY route, then now is the time to start working on them.",,,,
+Guest & Guestlist,Finish thank-you notes.,12/1/2015,"Ideally, you should try to get them done within two months of your wedding.",,,,
+Photography & Videography,Find photographers.,2/1/2015,You should absolutely love the person you hire. Ask friends with fantastic photos and use our photographer finder. Narrow it down to your top three and set up interviews with them.,,,,
+Photography & Videography,Book your photographer.,2/1/2015,"Now that you've met with a few, it's time to make a decision and book. Call references first (it can't hurt to double-check), then request a contract and review it for all the critical points.",,,,
+Photography & Videography,Take engagement photos.,3/1/2015,"They're an extra cost but an engagement photo shoot is well worth the money. Why? Besides the fact you'll get great photos, you'll feel more comfortable having a camera pointed at you on the day of.",,,,
+Photography & Videography,Find videographers.,5/1/2015,"A wedding video captures what the photos can't -- like your father's speech, your first dance, or your dress in motion. Research the pros, read our tips, and set up time to meet with your favorites.",,,,
+Photography & Videography,Book videographers,6/1/2015,,,,,
 Photography & Videography,Confirm shotlist,11/1/2015,,,,,
-Flower & Decor,Save flower photos.,3/1/2015,,,,,
-Flower & Decor,Save flower photos.,4/1/2015,,,,,
-Flower & Decor,Find florists,5/1/2015,,,,,
-Flower & Decor,Book your florist.,6/1/2015,,,,,
-Flower & Decor,List rentals and lighting.,7/1/2015,,,,,
-Flower & Decor,Order rentals and lighting.,9/1/2015,,,,,
-Music,Find bands and DJs.,6/1/2015,,,,,
-Music,Find ceremony musicians.,6/1/2015,,,,,
-Music,Book your DJ or band.,7/1/2015,,,,,
-Music,Book ceremony musicians.,7/1/2015,,,,,
-Catering & Cake,Find and meet caterers,5/1/2015,,,,,
-Catering & Cake,Book your caterer,5/1/2015,,,,,
-Catering & Cake,Save cake photos.,5/1/2015,,,,,
-Catering & Cake,Find cake bakers,7/1/2015,,,,,
-Catering & Cake,Book your cake baker.,7/1/2015,,,,,
+Flower & Decor,Save flower photos.,3/1/2015,"Browse photos and save the bouquets, centerpieces and little flower details you love. That way you'll have something to share with your florist.",,,,
+Flower & Decor,Save flower photos.,4/1/2015,"Browse photos and save the bouquets, centerpieces and little flower details you love. That way you'll have something to share with your florist.",,,,
+Flower & Decor,Find florists,5/1/2015,"You want to find someone you trust to make the right floral decisions -- someone who instinctively knows what will look good together. Once you've narrowed it down to two or three, meet in person.",,,,
+Flower & Decor,Book your florist.,6/1/2015,"Once you've read through your floral proposals and met with your top picks, book your favorite. Review the contract carefully and that it includes all of the ideas you talked about!",,,,
+Flower & Decor,Save program photos ,6/1/2015,"Take time to look for ceremony programs, escort cards, and any signage you might want. Save your favorite ideas to your planner and come up with a list of what you think you need.",,,,
+Flower & Decor,Save program photos ,7/1/2015,"Take time to look for ceremony programs, escort cards, and any signage you might want. Save your favorite ideas to your planner and come up with a list of what you think you need.",,,,
+Flower & Decor,List rentals and lighting.,7/1/2015,You can rent everything from a clear-top tent to bistro lights for over the dance floor and lounge furniture. Make a list of what you need and then start researching lighting and rental companies.,,,,
+Flower & Decor,Order rentals and lighting.,9/1/2015,"Once you've figured out what you need to rent and called around for pricing info, put in your order. At this point, you'll also want to work out delivery, setup and take down details.",,,,
+Music,Find bands and DJs.,6/1/2015,"Decide band or DJ. (Or hire both!) Do lots of homework, read reviews, listen to samples and see them in person if you can. Pick your favorites and then set up appointments to meet them.",,,,
+Music,Find ceremony musicians.,6/1/2015,"Traditional organ? Or modern DJ music? Put together a budget for your ceremony music and then start your search. Come up with two to three options, and then set up appointments to meet with them.",,,,
+Music,Book your DJ or band.,7/1/2015,"Decide which band or DJ you love, and request a contract to reserve your date. If you have questions, ask. You should be absolutely comfortable with the contract before you sign the dotted line.",,,,
+Music,Book ceremony musicians.,7/1/2015,"Now that you've had a chance to listen and meet with your ceremony music options, decide who you want to go with. Request a contract, read it carefully, and book them to reserve the date!",,,,
+Catering & Cake,Find and meet caterers,5/1/2015,Look online for wedding caterers in your area and ask recently married friends for recommendations. Narrow it down to two or three and set up times to meet and taste their menu options. (Yum.),,,,
+Catering & Cake,Book your caterer,5/1/2015,"Now that you've met with a few caterers and hashed out a rough price per head for each, it's time to book. Read and re-read the contract, then sign it and put down the deposit.",,,,
+Catering & Cake,Save cake photos.,5/1/2015,"Your cake design is your chance to drive home your favorite colors, flowers, and theme -- not to mention flavors! Look at tons of photos and save your favorites to show your cake baker.",,,,
+Catering & Cake,Find cake bakers,7/1/2015,"Ask newlywed friends, your venue, or caterer; or use a favorite bakery. Narrow it down to two or three bakers and then set up a time to meet in person and have a tasting!",,,,
+Catering & Cake,Book your cake baker.,7/1/2015,"Once you've had a chance to taste all the samples (yum), and talk design, decide on a baker. Request a contract and make sure all the details are there (like flavor and fillings). Then book!",,,,
 Speech & Toast,Prepare your toasts.,9/1/2015,,,,,
 Speech & Toast,Choose ceremony readings.,10/1/2015,,,,,
 Speech & Toast,Finalize your ceremony.,10/1/2015,,,,,
-Speech & Toast,Finalize ceremony vows.,11/1/2015,,,,,
+Speech & Toast,Finalize ceremony vows.,11/1/2015,"You definitely don't want to have this one hanging over your head right before the wedding. Once they're finished, print them out onto nice paper that you can read off of during the ceremony.",,,,
 Speech & Toast,Decide on receiving line order,11/1/2015,,,,,
-Honeymoon,Decide on a honeymoon location.,8/1/2015,,,,,
+Religious & Tradition,Find ceremony officiants,4/1/2015,"If your ceremony site isn't a house of worship, contact city or town halls and ask about judges or justices of the peace and use our officiant finder. You could even ask a friend to do it.",,,,
+Religious & Tradition,Book your officiant.,4/1/2015,"If it's a nondenominational person, there will probably be a contract and a deposit involved. This is also the time to start scheduling any premarital counseling sessions (if you're doing them).",,,,
+Religious & Tradition,Prepare your toasts.,9/1/2015,"Among the big glass-clinking moments, there's the rehearsal dinner and the reception dinner. Plan to say a few words. Look through our list of ideas and then print out or come up with your own toast.",,,,
+Religious & Tradition,Choose ceremony readings.,10/1/2015,"Great resources include religious texts, poetry and plays, children's books, song lyrics, or even your own love letters. This is also the time to decide who will be reading (and to ask them).",,,,
+Religious & Tradition,Finalize your ceremony.,10/1/2015,Schedule a follow-up meeting or phone call with your officiant to go over ceremony timing and details. Go over any personalized ceremony additions you want to make sure they're okay.,,,,
+Religious & Tradition,Finalize ceremony vows.,11/1/2015,,,,,
+Religious & Tradition,Decide on receiving line order,11/1/2015,,,,,
+Honeymoon,Decide on a honeymoon location.,8/1/2015,"Ask friends, family, and even travel agents to help you find your ideal vacation spot. Narrow it down to your top three to five spots and then start keeping an eye out for flights.",,,,

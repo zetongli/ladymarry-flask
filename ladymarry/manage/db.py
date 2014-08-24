@@ -35,7 +35,10 @@ class SeedDBCommand(Command):
                         category=row[0],
                         title=row[1],
                         task_date=row[2],
-                        description=row[3])
+                        description=row[3],
+                        tutorial=row[4],
+                        resource=row[5],
+                        image=row[7])
                 num += 1
 
             print 'Created %d tasks successfully.' % num

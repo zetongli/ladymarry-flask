@@ -19,7 +19,8 @@ TaskCategory = Enum('TaskCategory',
                     Music=7,
                     CateringAndCake=8,
                     SpeechAndToast=9,
-                    Honeymoon=10)
+                    ReligiousAndTradition=10,
+                    Honeymoon=11)
 TaskCategory.addAlias('Parties & Entertainment', 'PartiesAndEntertainment')
 TaskCategory.addAlias('Fashion & Beauty', 'FashionAndBeauty')
 TaskCategory.addAlias('Guest & Guestlist', 'GuestAndGuestlist')
@@ -27,6 +28,7 @@ TaskCategory.addAlias('Photography & Videography', 'PhotographyAndVideography')
 TaskCategory.addAlias('Flower & Decor', 'FlowerAndDecor')
 TaskCategory.addAlias('Catering & Cake', 'CateringAndCake')
 TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
+TaskCategory.addAlias('Religious & Tradition', 'ReligiousAndTradition')
 
 
 # related_tasks = db.Table(
