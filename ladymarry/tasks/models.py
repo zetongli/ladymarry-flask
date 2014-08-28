@@ -38,13 +38,11 @@ related_tasks = db.Table(
 
 
 class TaskJsonSerializer(JsonSerializer):
-    pass
+    __json_hidden__ = ['related_tasks', 'prev_related_tasks']
 
 
 class Task(TaskJsonSerializer, db.Model):
     __tablename__ = 'tasks'
-
-    __json_hidden__ = ['related_tasks', 'prev_related_tasks']
 
     id = db.Column(db.Integer(), primary_key=True)
 

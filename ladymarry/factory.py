@@ -1,9 +1,9 @@
 import os
 
-from celery import Celery
 from flask import Flask
+from flask_security import SQLAlchemyUserDatastore
 
-from .core import db
+from .core import db, jwt
 from .helpers import register_blueprints
 from .middleware import HTTPMethodOverrideMiddleware
 
@@ -27,6 +27,7 @@ def create_app(package_name, package_path, settings_override=None,
     app.config.from_object(settings_override)
 
     db.init_app(app)
+    jwt.init_app(app)
 
     register_blueprints(app, package_name, package_path)
 

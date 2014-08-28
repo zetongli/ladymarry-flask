@@ -1,7 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_jwt import JWT
 
 
 db = SQLAlchemy()
+jwt = JWT()
+
 
 class Service(object):
     """A :class:`Service` instance encapsulates common SQLAlchemy model
