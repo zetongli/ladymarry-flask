@@ -3,7 +3,11 @@ from dateutil import parser
 from flask import abort
 
 from ..core import Service
-from .models import Task, TaskStatus, TaskCategory
+from .models import Scenario, Task, TaskStatus, TaskCategory
+
+
+class ScenariosService(Service):
+    __model__ = Scenario
 
 
 class TasksService(Service):

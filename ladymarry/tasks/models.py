@@ -36,9 +36,29 @@ related_tasks = db.Table(
     db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
     db.Column('related_task_id', db.Integer(), db.ForeignKey('tasks.id')))
 
+tasks_scenarios = db.Table(
+    'tasks_scenarios',
+    db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
+    db.Column('scenario_id', db.Integer(), db.ForeignKey('scenarios.id')))
+
+
+class ScenarioJsonSerializer(JsonSerializer):
+    __json_hidden__ = ['tasks']
+
+
+class Scenario(ScenarioJsonSerializer, db.Model):
+    __tablename__ = 'scenarios'
+
+    id = db.Column(db.Integer(), primary_key=True)
+    title = db.Column(db.String(255))
+    when = db.Column(db.Text())
+    description = db.Column(db.Text())
+
 
 class TaskJsonSerializer(JsonSerializer):
-    __json_hidden__ = ['related_tasks', 'prev_related_tasks']
+    __json_hidden__ = ['related_tasks',
+                       'prev_related_tasks']
+
 
 
 class Task(TaskJsonSerializer, db.Model):
@@ -51,7 +71,12 @@ class Task(TaskJsonSerializer, db.Model):
     task_date = db.Column(db.DateTime())
     status = db.Column(db.Integer(), default=0)
     category = db.Column(db.Integer(), default=0)
-    priority = db.Column(db.Integer(), default=0)
+
+    scenarios = db.relationship(
+        'Scenario',
+        secondary=tasks_scenarios,
+        backref=db.backref('tasks', lazy='dynamic'),
+        lazy='dynamic')
 
     # Task detailed info.
     description = db.Column(db.Text())

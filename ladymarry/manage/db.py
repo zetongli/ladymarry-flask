@@ -53,4 +53,31 @@ class SeedDBCommand(Command):
                     tasks.save(task)
                 k += 1
 
+
+            #################################
+            # This is used for testing scenarios.
+            scenario1 = scenarios.create(title='scenario1',
+                                         when='mornint',
+                                         description='blabla')
+            scenario2 = scenarios.create(title='scenario2',
+                                         when='morninggggggn',
+                                         description='blablabbbbb')
+
+            task1 = tasks.get(1)
+            task2 = tasks.get(2)
+            task3 = tasks.get(3)
+
+            task1.scenarios.append(scenario1)
+            task1.scenarios.append(scenario2)
+            tasks.save(task1)
+
+            task2.scenarios.append(scenario1)
+            task2.scenarios.append(scenario2)
+            tasks.save(task2)
+
+            task3.scenarios.append(scenario1)
+            tasks.save(task3)
+            #################################            
+            
+            
             print 'Created %d tasks successfully.' % num
