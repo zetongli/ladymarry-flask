@@ -57,8 +57,8 @@ class Scenario(ScenarioJsonSerializer, db.Model):
 
 class TaskJsonSerializer(JsonSerializer):
     __json_hidden__ = ['related_tasks',
-                       'prev_related_tasks']
-
+                       'prev_related_tasks',
+                       'scenarios']
 
 
 class Task(TaskJsonSerializer, db.Model):
