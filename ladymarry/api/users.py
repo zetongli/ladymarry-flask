@@ -1,9 +1,10 @@
 from flask import Blueprint, abort, request
-from flask_jwt import current_user, jwt_required
+from flask_jwt import jwt_required
 from werkzeug.datastructures import MultiDict
 
 from ..forms import RegisterForm
-from ..services import users
+from ..models import Scenario, Task
+from ..services import *
 from . import route
 
 
@@ -15,10 +16,12 @@ def register():
     data = MultiDict(dict(**request.json))
     form = RegisterForm(data, csrf_enabled=False)
     if form.validate():
-        return users.register_user(email=form.email.data,
+        user = users.register_user(email=form.email.data,
                                    password=form.password.data,
                                    first_name=form.first_name.data,
                                    last_name=form.last_name.data)
+        tasks.init_tasks_for_user(user)
+        return user
     else:
         # TODO: Log error here.
         abort(400)
@@ -26,9 +29,23 @@ def register():
 @route(bp, '/me')
 @jwt_required()
 def me():
-    if not current_user:
-        abort(404)
-    # We have to cast current_user to User class since SQLAlchemy model can't
-    # be serialized to json.
-    return users.user_from_model(current_user)
+    return users.current_user()
 
+@route(bp, '/me/tasks')
+@jwt_required()
+def get_tasks_for_user():
+    return users.current_user().tasks.order_by(
+        Task.task_date, Task.category).all()
+
+@route(bp, '/me/scenarios')
+@jwt_required()
+def get_scenarios_for_user():
+    """Currently scenario is not customizable. """
+    return scenarios.all()
+
+@route(bp, '/me/scenarios/<scenario_id>/tasks')
+@jwt_required()
+def get_scenario_tasks_for_user(scenario_id):
+    return users.current_user().tasks.filter(
+        Task.scenarios.any(Scenario.id==scenario_id)).order_by(
+            Task.task_date, Task.category).all()

@@ -10,11 +10,14 @@ from .models import User
 class UsersService(Service):
     __model__ = User
 
-    def user_from_model(self, sqlalchemy_user):
-        """Returns a User object from SQLAlchemy User model. """
-        d = {k.key: getattr(sqlalchemy_user, k.key)
-             for k in sqlalchemy_user.__mapper__.iterate_properties}
-        return self.new(**d)
+    def current_user(self):
+        """IMPORTANT: This method should only be used within @jwt_required
+        decorator.
+        """
+        assert current_user
+        # We have to cast current_user to User class since SQLAlchemy model
+        # can't be serialized to json.
+        return self._user_from_model(current_user)
 
     def register_user(self, **kwargs):
         """This method should be called after RegisterForm validation. """
@@ -34,4 +37,8 @@ class UsersService(Service):
     def verify_password(self, user, password):
         return pwd_context.verify(password, user.password)
 
-
+    def _user_from_model(self, sqlalchemy_user):
+        """Returns a User object from SQLAlchemy User model. """
+        d = {k.key: getattr(sqlalchemy_user, k.key)
+             for k in sqlalchemy_user.__mapper__.iterate_properties}
+        return self.new(**d)
