@@ -34,18 +34,11 @@ def me():
 @route(bp, '/me/tasks')
 @jwt_required()
 def get_tasks_for_user():
-    return users.current_user().tasks.order_by(
-        Task.task_date, Task.category).all()
-
-@route(bp, '/me/scenarios')
-@jwt_required()
-def get_scenarios_for_user():
-    """Currently scenario is not customizable. """
-    return scenarios.all()
-
-@route(bp, '/me/scenarios/<scenario_id>/tasks')
-@jwt_required()
-def get_scenario_tasks_for_user(scenario_id):
-    return users.current_user().tasks.filter(
-        Task.scenarios.any(Scenario.id==scenario_id)).order_by(
+    scenario_id = request.args.get('scenario_id', None)
+    if not scenario_id:
+        return users.current_user().tasks.order_by(
             Task.task_date, Task.category).all()
+    else:
+        return users.current_user().tasks.filter(
+            Task.scenarios.any(Scenario.id==scenario_id)).order_by(
+                Task.task_date, Task.category).all()
