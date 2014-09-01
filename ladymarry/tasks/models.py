@@ -3,6 +3,7 @@ from ..helpers import JsonSerializer
 from ..libs.enum import Enum
 
 
+# Enum definitions.
 TaskStatus = Enum('TaskStatus',
                   Undo=0,
                   Done=1,
@@ -31,6 +32,7 @@ TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
 TaskCategory.addAlias('Religious & Tradition', 'ReligiousAndTradition')
 
 
+# Relation tables.
 related_tasks = db.Table(
     'related_tasks',
     db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
@@ -42,6 +44,7 @@ tasks_scenarios = db.Table(
     db.Column('scenario_id', db.Integer(), db.ForeignKey('scenarios.id')))
 
 
+# Scenario.
 class ScenarioJsonSerializer(JsonSerializer):
     __json_hidden__ = ['tasks']
 
@@ -55,10 +58,12 @@ class Scenario(ScenarioJsonSerializer, db.Model):
     description = db.Column(db.Text())
 
 
+# Task.
 class TaskJsonSerializer(JsonSerializer):
     __json_hidden__ = ['related_tasks',
                        'prev_related_tasks',
-                       'scenarios']
+                       'scenarios',
+                       'owner']
 
 
 class Task(TaskJsonSerializer, db.Model):
@@ -78,6 +83,8 @@ class Task(TaskJsonSerializer, db.Model):
         backref=db.backref('tasks', lazy='dynamic'),
         lazy='dynamic')
 
+    owner_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
+
     # Task detailed info.
     description = db.Column(db.Text())
     tutorial = db.Column(db.Text())
@@ -90,4 +97,3 @@ class Task(TaskJsonSerializer, db.Model):
         secondaryjoin=(id == related_tasks.c.related_task_id),
         backref=db.backref('prev_related_tasks', lazy='dynamic'),
         lazy='dynamic')
-    

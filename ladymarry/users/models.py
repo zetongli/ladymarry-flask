@@ -3,7 +3,7 @@ from ..helpers import JsonSerializer
 
 
 class UserJsonSerializer(JsonSerializer):
-    __json_public__ = ['id', 'email', 'first_name', 'last_name']
+    __json_hidden__ = ['password', 'tasks']
 
 
 class User(UserJsonSerializer, db.Model):
@@ -14,4 +14,6 @@ class User(UserJsonSerializer, db.Model):
     password = db.Column(db.String(255))
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
-    registered_at = db.Column(db.DateTime())        
+    registered_at = db.Column(db.DateTime())
+
+    tasks = db.relationship('Task', backref='owner', lazy='dynamic')
