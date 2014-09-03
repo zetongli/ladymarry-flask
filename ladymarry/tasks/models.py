@@ -5,7 +5,7 @@ from ..libs.enum import Enum
 
 # Enum definitions.
 TaskStatus = Enum('TaskStatus',
-                  Undo=0,
+                  NotDone=0,
                   Done=1,
                   OnHold=2)
 
@@ -13,23 +13,22 @@ TaskCategory = Enum('TaskCategory',
                     Overall=0,
                     PartiesAndEntertainment=1,
                     Venue=2,
-                    FashionAndBeauty=3,
+                    AttireAndBeauty=3,
                     GuestAndGuestlist=4,
                     PhotographyAndVideography=5,
                     FlowerAndDecor=6,
                     Music=7,
                     CateringAndCake=8,
                     SpeechAndToast=9,
-                    ReligiousAndTradition=10,
+                    Tradition=10,
                     Honeymoon=11)
 TaskCategory.addAlias('Parties & Entertainment', 'PartiesAndEntertainment')
-TaskCategory.addAlias('Fashion & Beauty', 'FashionAndBeauty')
+TaskCategory.addAlias('Attire & Beauty', 'AttireAndBeauty')
 TaskCategory.addAlias('Guest & Guestlist', 'GuestAndGuestlist')
 TaskCategory.addAlias('Photography & Videography', 'PhotographyAndVideography')
 TaskCategory.addAlias('Flower & Decor', 'FlowerAndDecor')
 TaskCategory.addAlias('Catering & Cake', 'CateringAndCake')
 TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
-TaskCategory.addAlias('Religious & Tradition', 'ReligiousAndTradition')
 
 
 # Relation tables.
