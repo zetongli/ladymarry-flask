@@ -1,3 +1,5 @@
+import logging
+
 from flask import Blueprint, abort, request
 from flask_jwt import jwt_required
 from werkzeug.datastructures import MultiDict
@@ -7,6 +9,8 @@ from ..models import Scenario, Task
 from ..services import *
 from . import route
 
+logging.basicConfig(level='INFO')
+logger = logging.getLogger(__name__)
 
 bp = Blueprint('users', __name__, url_prefix='/users')
 
@@ -19,11 +23,12 @@ def register():
         user = users.register_user(email=form.email.data,
                                    password=form.password.data,
                                    first_name=form.first_name.data,
-                                   last_name=form.last_name.data)
-        tasks.init_tasks_for_user(user)
+                                   last_name=form.last_name.data,
+                                   wedding_date=form.wedding_date.data)
+        tasks.schedule_tasks_for_user(user)
         return user
     else:
-        # TODO: Log error here.
+        logger.info('Register fail: %s', form.errors)
         abort(400)
 
 @route(bp, '/me')

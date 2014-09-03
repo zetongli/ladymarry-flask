@@ -1,4 +1,5 @@
 import csv
+import datetime
 
 from flask import current_app
 from flask.ext.script import Command, prompt, prompt_pass
@@ -36,10 +37,13 @@ class SeedDBCommand(Command):
                                      description='blablabbbbb')
 
         # Create test user.
-        user = users.register_user(email='test@fotavo.com',
-                                   password='123456',
-                                   first_name='Alice',
-                                   last_name='Wang')
-        tasks.init_tasks_for_user(user)
+        now = datetime.datetime.now()
+        user = users.register_user(
+            email='test@fotavo.com',
+            password='123456',
+            first_name='Alice',
+            last_name='Wang',
+            wedding_date=datetime.date(now.year + 1, now.month, now.day))
+        tasks.schedule_tasks_for_user(user)
 
         print 'Success!'

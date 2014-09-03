@@ -27,6 +27,7 @@ def get_related_tasks(task_id):
 @route(task_bp, '/<task_id>', methods=['PUT'])
 def update_task(task_id):
     # TODO: Verify params.
+    # TODO: Authenticate.
     return tasks.update(tasks.get_or_404(task_id), **request.json)
 
 
