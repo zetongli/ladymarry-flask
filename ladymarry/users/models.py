@@ -14,6 +14,7 @@ class User(UserJsonSerializer, db.Model):
     password = db.Column(db.String(255))
     first_name = db.Column(db.String(255))
     last_name = db.Column(db.String(255))
+    wedding_date = db.Column(db.DateTime())
     registered_at = db.Column(db.DateTime())
 
     tasks = db.relationship('Task', backref='owner', lazy='dynamic')

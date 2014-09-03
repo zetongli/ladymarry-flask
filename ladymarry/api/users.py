@@ -19,8 +19,9 @@ def register():
         user = users.register_user(email=form.email.data,
                                    password=form.password.data,
                                    first_name=form.first_name.data,
-                                   last_name=form.last_name.data)
-        tasks.init_tasks_for_user(user)
+                                   last_name=form.last_name.data,
+                                   wedding_date=form.wedding_date.data)
+        tasks.schedule_tasks_for_user(user)
         return user
     else:
         # TODO: Log error here.
