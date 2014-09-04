@@ -24,12 +24,6 @@ def get_related_tasks(task_id):
     task = tasks.get_or_404(task_id)
     return task.related_tasks.all()
 
-@route(task_bp, '/<task_id>', methods=['PUT'])
-def update_task(task_id):
-    # TODO: Verify params.
-    # TODO: Authenticate.
-    return tasks.update(tasks.get_or_404(task_id), **request.json)
-
 
 scenario_bp = Blueprint('scenarios', __name__, url_prefix='/scenarios')
 
@@ -41,8 +35,3 @@ def get_all_scenarios():
 @route(scenario_bp, '/<scenario_id>')
 def get_single_scenario(scenario_id):
     return scenarios.get_or_404(scenario_id)
-
-@route(scenario_bp, '/<scenario_id>/tasks')
-def get_scenario_tasks(scenario_id):
-    scenario = scenarios.get_or_404(scenario_id)
-    return scenario.tasks.all()
