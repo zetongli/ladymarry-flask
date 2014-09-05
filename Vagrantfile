@@ -149,6 +149,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       sudo pip install -r /home/vagrant/ladymarry-flask/requirements.txt
 
+      # We need to install the latest version of Flask-JWT.
+      git clone https://github.com/mattupstate/flask-jwt.git ./flask-jwt
+      sudo pip install ./flask-jwt
+
       # Config nodejs.
       sudo apt-get install -y python-software-properties
       sudo add-apt-repository ppa:chris-lea/node.js
