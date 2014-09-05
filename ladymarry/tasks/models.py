@@ -21,8 +21,7 @@ TaskCategory = Enum('TaskCategory',
                     CateringAndCake=8,
                     SpeechAndToast=9,
                     Tradition=10,
-                    Honeymoon=11,
-                    Beach=12)
+                    Honeymoon=11)
 TaskCategory.addAlias('Parties & Entertainment', 'PartiesAndEntertainment')
 TaskCategory.addAlias('Attire & Beauty', 'AttireAndBeauty')
 TaskCategory.addAlias('Guest & Guestlist', 'GuestAndGuestlist')
