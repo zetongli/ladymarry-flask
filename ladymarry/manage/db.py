@@ -27,6 +27,9 @@ class ClearDBCommand(Command):
 
 class SeedDBCommand(Command):
     def run(self):
+        # Create scenarios.
+        scenarios.init_scenarios()
+
         # Create test user.
         now = datetime.datetime.now()
         user = users.register_user(

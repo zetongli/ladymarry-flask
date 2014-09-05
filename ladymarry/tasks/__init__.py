@@ -8,6 +8,10 @@ from .scheduler import Scheduler
 class ScenariosService(Service):
     __model__ = Scenario
 
+    def init_scenarios(self):
+        scheduler = Scheduler(self, TasksService())
+        scheduler.init_scenarios()
+
 
 class TasksService(Service):
     __model__ = Task

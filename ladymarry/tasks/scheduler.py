@@ -13,6 +13,16 @@ class Scheduler(object):
         self._scenarios = scenarios
         self._tasks = tasks
 
+    def init_scenarios(self):
+        """This should be called only once to create Scenario objects. """
+        for row in self._read_csv(current_app.config['SCENARIO_DATA_FILE']):
+            if not row[0]:
+                continue
+            scenario = self._scenarios.create(
+                title=row[0],
+                when=row[1],
+                description=row[2])
+
     def schedule_tasks(self, user, create_when_no_task=True):
         """Initializes all tasks for a new user. """
         if not user:
@@ -64,21 +74,15 @@ class Scheduler(object):
 
     def _read_scenarios(self):
         """Returns (scenarios, scenario_index_to_task_indices). """
-        scenarios = []
+        scenarios = Scenario.query.order_by(Scenario.id).all()
         # Map <scenario index, task indices>.
         scenario_index_to_task_indices = {}
         i = 0
         for row in self._read_csv(current_app.config['SCENARIO_DATA_FILE']):
-            if not row[0]:
+            if not row[0] or not row[3]:
                 continue
-            scenario = self._scenarios.create(
-                title=row[0],
-                when=row[1],
-                description=row[2])
-            scenarios.append(scenario)
-            if row[3]:
-                scenario_index_to_task_indices[i] = [int(k.strip()) - 2
-                                                     for k in row[3].split(',')]
+            scenario_index_to_task_indices[i] = [int(k.strip()) - 2
+                                                 for k in row[3].split(',')]
             i += 1
         return scenarios, scenario_index_to_task_indices
 

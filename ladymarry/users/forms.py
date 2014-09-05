@@ -2,7 +2,7 @@ import datetime
 
 from flask_wtf import Form
 from wtforms import DateField, StringField, PasswordField
-from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+from wtforms.validators import DataRequired, Email, EqualTo, Optional, ValidationError
 
 __all__ = ['RegisterForm', 'UpdateForm']
 
@@ -15,7 +15,7 @@ class RegisterForm(Form):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField(
-        'Confirm Password', validators=[DataRequired(), EqualTo('password')])
+        'Confirm Password', validators=[Optional(), EqualTo('password')])
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
     wedding_date = DateField(
@@ -24,10 +24,10 @@ class RegisterForm(Form):
 
 
 class UpdateForm(Form):
-    email = StringField('Email', validators=[Email()])
-    first_name = StringField('First Name', validators=[])
-    last_name = StringField('Last Name', validators=[])
+    email = StringField('Email', validators=[Email(), Optional()])
+    first_name = StringField('First Name', validators=[Optional()])
+    last_name = StringField('Last Name', validators=[Optional()])
     wedding_date = DateField(
         'Wedding Date',
-        validators=[_wedding_date_check])
+        validators=[_wedding_date_check, Optional()])
     
