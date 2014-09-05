@@ -13,15 +13,37 @@ class Scheduler(object):
         self._scenarios = scenarios
         self._tasks = tasks
 
-    def schedule_tasks(self, user):
+    def schedule_tasks(self, user, create_when_no_task=True):
         """Initializes all tasks for a new user. """
         if not user:
             return
 
-        # Create tasks.
+        tasks = user.tasks.all()
+        if not tasks and create_when_no_task:
+            scenarios, scenario_index_to_task_indices = self._read_scenarios()
+            tasks, task_index_to_task_indices = self._read_tasks(user)
+
+            # Set up related tasks.
+            for index, indices in task_index_to_task_indices.iteritems():
+                task = tasks[index]
+                for k in indices:
+                    task.related_tasks.append(tasks[k])
+
+            # Set up scenario tasks.
+            for index, indices in scenario_index_to_task_indices.iteritems():
+                scenario = scenarios[index]
+                for k in indices:
+                    tasks[k].scenarios.append(scenario)
+
+        tasks = self._adjust_time(user.wedding_date, tasks)
+        for task in tasks:
+            self._tasks.save(task)
+
+    def _read_tasks(self, user):
+        """Returns (tasks, task_index_to_task_indices). """
         tasks = []
         # Map <task index, related task indices>.
-        index_to_task_indices = {}
+        task_index_to_task_indices = {}
         i = 0
         for row in self._read_csv(current_app.config['TASK_DATA_FILE']):
             task = self._tasks.new(
@@ -35,44 +57,39 @@ class Scheduler(object):
                 owner=user)
             tasks.append(task)
             if row[6]:
-                index_to_task_indices[i] = [int(k.strip()) - 2
+                task_index_to_task_indices[i] = [int(k.strip()) - 2
                                             for k in row[6].split(',')]
             i += 1
+        return tasks, task_index_to_task_indices
 
-        # Set up related tasks.
-        for index, indices in index_to_task_indices.iteritems():
-            task = tasks[index]
-            for k in indices:
-                task.related_tasks.append(tasks[k])
+    def _read_scenarios(self):
+        """Returns (scenarios, scenario_index_to_task_indices). """
+        scenarios = []
+        # Map <scenario index, task indices>.
+        scenario_index_to_task_indices = {}
+        i = 0
+        for row in self._read_csv(current_app.config['SCENARIO_DATA_FILE']):
+            if not row[0]:
+                continue
+            scenario = self._scenarios.create(
+                title=row[0],
+                when=row[1],
+                description=row[2])
+            scenarios.append(scenario)
+            if row[3]:
+                scenario_index_to_task_indices[i] = [int(k.strip()) - 2
+                                                     for k in row[3].split(',')]
+            i += 1
+        return scenarios, scenario_index_to_task_indices
 
-        tasks = self.adjust_time(user.wedding_date, tasks)
-        tasks = [self._tasks.save(task) for task in tasks]
-
-        #################################
-        # This is used for testing scenarios.
-        scenario1 = self._scenarios.get(1)
-        scenario2 = self._scenarios.get(2)
-
-        task1 = self._tasks.get(tasks[0].id)
-        task2 = self._tasks.get(tasks[1].id)
-        task3 = self._tasks.get(tasks[2].id)
-
-        task1.scenarios.append(scenario1)
-        task1.scenarios.append(scenario2)
-        self._tasks.save(task1)
-
-        task2.scenarios.append(scenario1)
-        task2.scenarios.append(scenario2)
-        self._tasks.save(task2)
-
-        task3.scenarios.append(scenario1)
-        self._tasks.save(task3)
-        #################################
-
-    def adjust_time(self, wedding_date, tasks):
+    def _adjust_time(self, wedding_date, tasks):
         """NOTE: To reduce db requests, the input tasks are not necessarily
         stored in db, which means task.id may not exist.
+        Returns the adjusted tasks (not saved).
         """
+        if not tasks:
+            return []
+
         now = datetime.datetime.now()
         elapsedTime = wedding_date - now
 

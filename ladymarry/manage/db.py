@@ -27,15 +27,6 @@ class ClearDBCommand(Command):
 
 class SeedDBCommand(Command):
     def run(self):
-        # Create scenarios.
-        # TODO: Use real data.
-        scenario1 = scenarios.create(title='scenario1',
-                                     when='mornint',
-                                     description='blabla')
-        scenario2 = scenarios.create(title='scenario2',
-                                     when='morninggggggn',
-                                     description='blablabbbbb')
-
         # Create test user.
         now = datetime.datetime.now()
         user = users.register_user(

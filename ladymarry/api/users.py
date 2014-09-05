@@ -4,7 +4,7 @@ from flask import Blueprint, abort, request
 from flask_jwt import jwt_required
 from werkzeug.datastructures import MultiDict
 
-from ..forms import RegisterForm
+from ..forms import RegisterForm, UpdateForm
 from ..models import Scenario, Task
 from ..services import tasks, users
 from . import route
@@ -26,7 +26,8 @@ def register():
                                    first_name=form.first_name.data,
                                    last_name=form.last_name.data,
                                    wedding_date=form.wedding_date.data)
-        tasks.schedule_tasks_for_user(user)
+        if form.wedding_date.data:
+            tasks.schedule_tasks_for_user(user)
         return user
     else:
         logger.info('Register fail: %s', form.errors)
@@ -36,6 +37,22 @@ def register():
 @jwt_required()
 def me():
     return users.current_user()
+
+@route(bp, '/me', methods=['PUT'])
+@jwt_required()
+def update():
+    data = MultiDict(dict(**request.json))
+    form = UpdateForm(data, csrf_enabled=False)
+    if form.validate():
+        user = users.update(users.current_user(), **request.json)
+
+        # Re-schedule tasks if wedding_date is updated.
+        if form.wedding_date.data:
+            tasks.schedule_tasks_for_user(user)
+        return user
+    else:
+        logger.info('Update fail: %s', form.errors)
+        abort(400)
 
 # Tasks APIs.
 @route(bp, '/me/tasks')

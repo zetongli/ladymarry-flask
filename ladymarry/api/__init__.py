@@ -52,5 +52,5 @@ def authenticate(username, password):
 
 @jwt.user_handler
 def load_user(payload):
-    return users_service.get(payload['user_id'])
-    
+    # This is a hack that actually put user_id into current_user.
+    return payload['user_id']
