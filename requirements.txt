@@ -7,7 +7,6 @@ Flask-SQLAlchemy
 Flask-Script
 Flask-Security
 Flask-WTF
-Flask-JWT
 Jinja2
 Werkzeug
 mock

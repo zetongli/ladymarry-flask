@@ -5,6 +5,15 @@ from ..helpers import JsonSerializer
 class UserJsonSerializer(JsonSerializer):
     __json_hidden__ = ['password', 'tasks']
 
+    def get_field_names(self):
+        """Override base method as we need to return `token` field after
+        registration.
+        """
+        for p in self.__mapper__.iterate_properties:
+            yield p.key
+        if hasattr(self, 'token'):
+            yield 'token'
+
 
 class User(UserJsonSerializer, db.Model):
     __tablename__ = 'users'

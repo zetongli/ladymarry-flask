@@ -85,6 +85,7 @@ class Task(TaskJsonSerializer, db.Model):
     owner_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
 
     # Task detailed info.
+    note = db.Column(db.Text())
     description = db.Column(db.Text())
     tutorial = db.Column(db.Text())
     resource = db.Column(db.Text())

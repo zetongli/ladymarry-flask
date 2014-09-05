@@ -1,7 +1,7 @@
 import logging
 
 from flask import Blueprint, abort, request
-from flask_jwt import jwt_required
+from flask_jwt import generate_token, jwt_required
 from werkzeug.datastructures import MultiDict
 
 from ..forms import RegisterForm, UpdateForm
@@ -18,6 +18,7 @@ bp = Blueprint('users', __name__, url_prefix='/users')
 # Auth APIs.
 @route(bp, '/', methods=['POST'])
 def register():
+    """Returns the registered user with token if success. """
     data = MultiDict(dict(**request.json))
     form = RegisterForm(data, csrf_enabled=False)
     if form.validate():
@@ -28,6 +29,9 @@ def register():
                                    wedding_date=form.wedding_date.data)
         if form.wedding_date.data:
             tasks.schedule_tasks_for_user(user)
+
+        # Generate JWT token for this user.
+        user.token = generate_token(user)
         return user
     else:
         logger.info('Register fail: %s', form.errors)
