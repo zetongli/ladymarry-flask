@@ -31,7 +31,9 @@ class TasksService(Service):
 
         task_date = kwargs.get('task_date', None)
         if task_date and isinstance(task_date, basestring):
-            kwargs['task_date'] = parser.parse(task_date)
+            date = parser.parse(task_date)
+            # We need to make offset aware datetime offset naive.
+            kwargs['task_date'] = date.replace(tzinfo=None)
         return kwargs
 
     def _maybe_cast_enum_string_to_int(self, enum_cls, v):
