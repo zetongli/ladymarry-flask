@@ -4,6 +4,7 @@ from flask import Blueprint, abort, request
 from flask_jwt import generate_token, jwt_required
 from werkzeug.datastructures import MultiDict
 
+from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
 from ..models import Scenario, Task
 from ..services import tasks, users
@@ -22,6 +23,10 @@ def register():
     data = MultiDict(dict(**request.json))
     form = RegisterForm(data, csrf_enabled=False)
     if form.validate():
+        # Check if email is used.
+        if users.first(email=form.email.data):
+            raise LadyMarryError(
+                'Email %s is already registered.' % form.email.data)
         user = users.register_user(email=form.email.data,
                                    password=form.password.data,
                                    first_name=form.first_name.data,
@@ -35,7 +40,7 @@ def register():
         return user
     else:
         logger.info('Register fail: %s', form.errors)
-        abort(400)
+        raise LadyMarryFormError(form.errors)
 
 @route(bp, '/me')
 @jwt_required()
@@ -56,7 +61,7 @@ def update():
         return user
     else:
         logger.info('Update fail: %s', form.errors)
-        abort(400)
+        raise LadyMarryFormError(form.errors)
 
 # Tasks APIs.
 @route(bp, '/me/tasks')

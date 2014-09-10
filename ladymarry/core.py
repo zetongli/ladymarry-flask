@@ -6,6 +6,21 @@ db = SQLAlchemy()
 jwt = JWT()
 
 
+class LadyMarryError(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
+class LadyMarryFormError(Exception):
+    def __init__(self, errors=None):
+        self.errors = errors
+
+    def get_message(self):
+        """Converts form errors into human readable format. """
+        return ' '.join(
+            '%s: %s' % (k, v[0]) for k, v in self.errors.iteritems())
+
+
 class Service(object):
     """A :class:`Service` instance encapsulates common SQLAlchemy model
     operations in the context of a :class:`Flask` application.
