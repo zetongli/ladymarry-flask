@@ -3,7 +3,7 @@ from functools import wraps
 from flask import Response, jsonify, json, current_app, request
 
 from .. import factory
-from ..core import jwt
+from ..core import LadyMarryError, LadyMarryFormError, jwt
 from ..helpers import JSONEncoder
 from ..services import users as users_service
 
@@ -13,6 +13,11 @@ def create_app(settings_override=None):
 
     # Set the default JSON encoder.
     app.json_encoder = JSONEncoder
+
+    # Register custom error handlers.
+    app.errorhandler(LadyMarryError)(on_ladymarry_error)
+    app.errorhandler(LadyMarryFormError)(on_ladymarry_form_error)
+    app.errorhandler(404)(on_404)
 
     return app
 
@@ -54,3 +59,14 @@ def authenticate(username, password):
 def load_user(payload):
     # This is a hack that actually put user_id into current_user.
     return payload['user_id']
+
+# Error handlers.
+def on_ladymarry_error(e):
+    return jsonify(dict(error=e.message)), 400
+
+def on_ladymarry_form_error(e):
+    return jsonify(dict(error=e.get_message())), 400
+
+def on_404(e):
+    return jsonify(dict(error='Not found')), 404
+    
