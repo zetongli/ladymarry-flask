@@ -1,4 +1,4 @@
-from flask import Blueprint, current_app, render_template
+from flask import Blueprint, current_app
 
 from . import route
 
@@ -8,7 +8,7 @@ bp = Blueprint('homepage', __name__)
 
 @route(bp, '/')
 def homepage():
-    return render_template('index.html')
+    return current_app.send_static_file('app/index.html')
 
 @route(bp, '/<path:filename>')
 def static(filename):
