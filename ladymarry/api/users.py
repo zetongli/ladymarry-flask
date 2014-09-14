@@ -76,6 +76,13 @@ def get_tasks_for_user():
             Task.scenarios.any(Scenario.id==scenario_id)).order_by(
                 Task.task_date, Task.category).all()
 
+@route(bp, '/me/tasks', methods=['POST'])
+@jwt_required()
+def create_tasks_for_user():
+    # TODO: Supports scenarios.
+    return tasks.create(**request.json)
+
+
 # Single task APIs.
 @route(bp, '/me/tasks/<task_id>')
 @jwt_required()
