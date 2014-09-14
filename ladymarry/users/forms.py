@@ -10,6 +10,10 @@ def _wedding_date_check(form, field):
     if field.data and field.data < datetime.date.today():
         raise ValidationError('Wedding date should be a future date.')
 
+def _default_wedding_date():
+    now = datetime.datetime.now()
+    return datetime.date(now.year + 1, now.month, now.day)        
+
 
 class RegisterForm(Form):
     email = StringField('Email', validators=[DataRequired(), Email()])
@@ -20,6 +24,7 @@ class RegisterForm(Form):
     last_name = StringField('Last Name', validators=[DataRequired()])
     wedding_date = DateField(
         'Wedding Date',
+        default=_default_wedding_date(),
         validators=[_wedding_date_check])
 
 
