@@ -103,9 +103,10 @@ class Scheduler(object):
         for i in xrange(num_months):
             adjusted_months.append(
                 self._increment_month_and_clear_day(now, i + 1))
-        if now.day < 15:
-            num_months += 1
-            adjusted_months.insert(0, datetime.date(now.year, now.month, 1))
+
+        # TODO: Check if now.day < 15 this once we have better product solution.
+        num_months += 1
+        adjusted_months.insert(0, datetime.date(now.year, now.month, 1))
 
         if num_months <= 0:
             return tasks
