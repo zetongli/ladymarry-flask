@@ -60,6 +60,10 @@ def load_user(payload):
     # This is a hack that actually put user_id into current_user.
     return payload['user_id']
 
+@jwt.error_handler
+def error_handler(e):
+    return jsonify(dict(error='Invalid JWT token')), 401
+
 # Error handlers.
 def on_ladymarry_error(e):
     return jsonify(dict(error=e.message)), 400
