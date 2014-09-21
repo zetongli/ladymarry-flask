@@ -80,7 +80,11 @@ def get_tasks_for_user():
 @jwt_required()
 def create_tasks_for_user():
     # TODO: Supports scenarios.
-    return tasks.create(**request.json)
+    params = request.json
+    if 'owner_id' in params and params['owner_id'] != users.current_user().id:
+        raise LadyMarryError('Cannot create task for other users.')
+    params['owner_id'] = users.current_user().id
+    return tasks.create(**params)
 
 
 # Single task APIs.
