@@ -75,14 +75,16 @@ class Task(TaskJsonSerializer, db.Model):
     task_date = db.Column(db.DateTime())
     status = db.Column(db.Integer(), default=0)
     category = db.Column(db.Integer(), default=0)
+    owner_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
+    # Position only makes sense within same category and month. Using float
+    # to make it efficient to change order.
+    position = db.Column(db.Float())
 
     scenarios = db.relationship(
         'Scenario',
         secondary=tasks_scenarios,
         backref=db.backref('tasks', lazy='dynamic'),
         lazy='dynamic')
-
-    owner_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
 
     # Task detailed info.
     note = db.Column(db.Text())

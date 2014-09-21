@@ -64,6 +64,7 @@ class Scheduler(object):
                 tutorial=row[4],
                 resource=row[5],
                 image=row[7],
+                position=i,
                 owner=user)
             tasks.append(task)
             if row[6]:

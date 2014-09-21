@@ -70,11 +70,11 @@ def get_tasks_for_user():
     scenario_id = request.args.get('scenario_id', None)
     if not scenario_id:
         return users.current_user().tasks.order_by(
-            Task.task_date, Task.category).all()
+            Task.task_date, Task.category, Task.position).all()
     else:
         return users.current_user().tasks.filter(
             Task.scenarios.any(Scenario.id==scenario_id)).order_by(
-                Task.task_date, Task.category).all()
+                Task.task_date, Task.category, Task.position).all()
 
 @route(bp, '/me/tasks', methods=['POST'])
 @jwt_required()
