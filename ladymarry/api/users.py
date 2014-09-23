@@ -7,7 +7,7 @@ from werkzeug.datastructures import MultiDict
 from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
 from ..models import Scenario, Task
-from ..services import tasks, users
+from ..services import scenarios, tasks, users
 from . import route
 
 logging.basicConfig(level='INFO')
@@ -79,12 +79,21 @@ def get_tasks_for_user():
 @route(bp, '/me/tasks', methods=['POST'])
 @jwt_required()
 def create_tasks_for_user():
-    # TODO: Supports scenarios.
+    # TODO: Verify params.
     params = request.json
+
+    # Check and set owner_id if needed.
     if 'owner_id' in params and params['owner_id'] != users.current_user().id:
         raise LadyMarryError('Cannot create task for other users.')
     params['owner_id'] = users.current_user().id
-    return tasks.create(**params)
+
+    # Convert scenario ids into scenario object if given.
+    if 'scenarios' in params:
+        for i in xrange(len(params['scenarios'])):
+            params['scenarios'][i] = scenarios.get_or_404(
+                params['scenarios'][i])
+
+    task = tasks.create(**params)
 
 
 # Single task APIs.
@@ -99,6 +108,11 @@ def update_task(task_id):
     # TODO: Verify params.
     return tasks.update(tasks.get_or_404(task_id), **request.json)
 
+@route(bp, '/me/tasks/<task_id>', methods=['DELETE'])
+@jwt_required()
+def delete_task(task_id):
+    tasks.delete(tasks.get_or_404(task_id))
+    
 # Related tasks APIs.
 @route(bp, '/me/tasks/<task_id>/related_tasks')
 @jwt_required()
