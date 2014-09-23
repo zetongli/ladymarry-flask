@@ -93,7 +93,7 @@ def create_tasks_for_user():
             params['scenarios'][i] = scenarios.get_or_404(
                 params['scenarios'][i])
 
-    task = tasks.create(**params)
+    return tasks.create(**params)
 
 
 # Single task APIs.
