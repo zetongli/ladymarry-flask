@@ -68,13 +68,31 @@ def update():
 @jwt_required()
 def get_tasks_for_user():
     scenario_id = request.args.get('scenario_id', None)
+    default_group_series_tasks = (scenario_id != None)
+    group_series_tasks = request.args.get(
+        'group_series_tasks', default_group_series_tasks)
+
     if not scenario_id:
-        return users.current_user().tasks.order_by(
+        tasks = users.current_user().tasks.order_by(
             Task.task_date, Task.category, Task.position).all()
     else:
-        return users.current_user().tasks.filter(
+        tasks = users.current_user().tasks.filter(
             Task.scenarios.any(Scenario.id==scenario_id)).order_by(
                 Task.task_date, Task.category, Task.position).all()
+
+    if group_series_tasks:
+        # Remove series tasks except the 1st one.
+        res = []
+        for task in tasks:
+            if task.series_tasks:
+                if not task.title.endswith(' I'):
+                    continue
+                task.title = task.title.replace(' I', '')
+            res.append(task)
+        return res
+
+    return tasks
+
 
 @route(bp, '/me/tasks', methods=['POST'])
 @jwt_required()
