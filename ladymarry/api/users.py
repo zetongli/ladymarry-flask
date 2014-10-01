@@ -114,14 +114,13 @@ def update_task(task_id):
     origin_task = tasks.get_or_404(task_id)
     task = tasks.update(origin_task, **params)
 
-    # If series attrs is updated, update series tasks (if any) as well.
-    unseries_attrs = ['task_date', 'position', 'title']
+    # If unseries attrs aren't updated, update series tasks (if any) as well.
+    unseries_attrs = ['id', 'task_date', 'position', 'title']
     if all(getattr(task, attr) == getattr(origin_task, attr)
            for attr in unseries_attrs):
         for attr in unseries_attrs:
             params.pop(attr, None)
         for series_task in task.series_tasks:
-            request.json['id'] = series_task.id
             tasks.update(series_task, **request.json)
     return task
 
@@ -129,11 +128,11 @@ def update_task(task_id):
 @jwt_required()
 def delete_task(task_id):
     task = tasks.get_or_404(task_id)
+    # Delete series tasks if any.
     for series_task in task.series_tasks:
         tasks.delete(series_task)
-    
     tasks.delete(task)
-    # Delete series tasks if any.
+
 
 # Related tasks APIs.
 @route(bp, '/me/tasks/<task_id>/related_tasks')
