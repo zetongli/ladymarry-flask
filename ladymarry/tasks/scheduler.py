@@ -7,6 +7,10 @@ from flask import current_app
 from .models import Scenario, Task
 
 
+# TODO: Generalize to any roman numbers.
+ROMANS = [' I', ' II', ' III', ' IV', 'V']
+
+
 class Scheduler(object):
 
     def __init__(self, scenarios, tasks):
@@ -38,6 +42,21 @@ class Scheduler(object):
                 task = tasks[index]
                 for k in indices:
                     task.related_tasks.append(tasks[k])
+
+            # Set up series tasks.
+            title_to_series_tasks = defaultdict(list)
+            for i in xrange(len(tasks)):
+                for r in ROMANS:
+                    if tasks[i].title.endswith(r):
+                        title = tasks[i].title.replace(r, '')
+                        title_to_series_tasks[title].append(tasks[i])
+            for _, series in title_to_series_tasks.iteritems():
+                for i in xrange(len(series)):
+                    task = series[i]
+                    # Series tasks don't include itself.
+                    series_tasks = series[:]
+                    del series_tasks[i]
+                    task.series_tasks = series_tasks
 
             # Set up scenario tasks.
             for index, indices in scenario_index_to_task_indices.iteritems():

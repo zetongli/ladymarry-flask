@@ -34,13 +34,24 @@ TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
 # Relation tables.
 related_tasks = db.Table(
     'related_tasks',
-    db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
-    db.Column('related_task_id', db.Integer(), db.ForeignKey('tasks.id')))
+    db.Column('task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')),
+    db.Column('related_task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')))
 
 tasks_scenarios = db.Table(
     'tasks_scenarios',
-    db.Column('task_id', db.Integer(), db.ForeignKey('tasks.id')),
-    db.Column('scenario_id', db.Integer(), db.ForeignKey('scenarios.id')))
+    db.Column('task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')),
+    db.Column('scenario_id', db.Integer(),
+              db.ForeignKey('scenarios.id', ondelete='cascade')))
+
+series_tasks = db.Table(
+    'series_tasks',
+    db.Column('task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')),
+    db.Column('series_task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')))
 
 
 # Scenario.
@@ -64,6 +75,11 @@ class TaskJsonSerializer(JsonSerializer):
                        'scenarios',
                        'owner']
 
+    # For series tasks, we dump task id for each of them.
+    __json_modifiers__ = {
+        'series_tasks': lambda tasks, _: [dict(id=task.id) for task in tasks]
+    }
+
 
 class Task(TaskJsonSerializer, db.Model):
     __tablename__ = 'tasks'
@@ -75,16 +91,23 @@ class Task(TaskJsonSerializer, db.Model):
     task_date = db.Column(db.DateTime())
     status = db.Column(db.Integer(), default=0)
     category = db.Column(db.Integer(), default=0)
-    owner_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
+    owner_id = db.Column(db.Integer(),
+                         db.ForeignKey('users.id', ondelete='cascade'))
     # Position only makes sense within same category and month. Using float
     # to make it efficient to change order.
     position = db.Column(db.Float())
-
     scenarios = db.relationship(
         'Scenario',
         secondary=tasks_scenarios,
         backref=db.backref('tasks', lazy='dynamic'),
         lazy='dynamic')
+    # This is used for task over multiple months. Series tasks don't include
+    # itself.
+    series_tasks = db.relationship(
+        'Task',
+        secondary=series_tasks,
+        primaryjoin=(id == series_tasks.c.task_id),
+        secondaryjoin=(id == series_tasks.c.series_task_id))
 
     # Task detailed info.
     note = db.Column(db.Text())

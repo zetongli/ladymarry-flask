@@ -102,21 +102,41 @@ def create_tasks_for_user():
 def get_single_task(task_id):
     return tasks.get_or_404(task_id)
 
+# TODO: Verify params.
+# TODO: Series tasks are not handled correct always.
 @route(bp, '/me/tasks/<task_id>', methods=['PUT'])
 @jwt_required()
 def update_task(task_id):
-    # TODO: Verify params.
-    return tasks.update(tasks.get_or_404(task_id), **request.json)
+    # Right now, series_tasks can't be updated.
+    params = request.json
+    params.pop('series_tasks', None)
+
+    origin_task = tasks.get_or_404(task_id)
+    task = tasks.update(origin_task, **params)
+
+    # If unseries attrs aren't updated, update series tasks (if any) as well.
+    unseries_attrs = ['id', 'task_date', 'position', 'title']
+    if all(getattr(task, attr) == getattr(origin_task, attr)
+           for attr in unseries_attrs):
+        for attr in unseries_attrs:
+            params.pop(attr, None)
+        for series_task in task.series_tasks:
+            tasks.update(series_task, **request.json)
+    return task
 
 @route(bp, '/me/tasks/<task_id>', methods=['DELETE'])
 @jwt_required()
 def delete_task(task_id):
-    tasks.delete(tasks.get_or_404(task_id))
-    
+    task = tasks.get_or_404(task_id)
+    # Delete series tasks if any.
+    for series_task in task.series_tasks:
+        tasks.delete(series_task)
+    tasks.delete(task)
+
+
 # Related tasks APIs.
 @route(bp, '/me/tasks/<task_id>/related_tasks')
 @jwt_required()
 def get_related_tasks(task_id):
     task = tasks.get_or_404(task_id)
     return task.related_tasks.all()
-
