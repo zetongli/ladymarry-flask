@@ -114,30 +114,34 @@ class Scheduler(object):
         if not tasks:
             return []
 
-        now = datetime.datetime.now()
-        elapsedTime = wedding_date - now
-
         # Generate adjusted months array based on the wedding date.
-        num_months = int(elapsedTime.total_seconds() / (30 * 24 * 60 * 60))
         adjusted_months = []
-        for i in xrange(num_months):
-            adjusted_months.append(
-                self._increment_month_and_clear_day(now, i + 1))
+        now = datetime.date.today()
+        date = self._increment_month_and_clear_day(now, 1)
+        while date <= wedding_date.date():
+            adjusted_months.append(date)
+            date = self._increment_month_and_clear_day(date, 1)
 
-        # TODO: Check if now.day < 15 this once we have better product solution.
-        num_months += 1
-        adjusted_months.insert(0, datetime.date(now.year, now.month, 1))
+        # Fine tune the begin and end month.
+        if adjusted_months and wedding_date.day < 15:
+            adjusted_months.pop()
+        if now.day <= 15:
+            adjusted_months.insert(0, datetime.date(now.year, now.month, 1))
 
-        if num_months <= 0:
+        if not adjusted_months:
             return tasks
 
-        # For each task, calculate "precise month" for it, e.g. in month 2,
-        # there are 2 tasks for category C, then task1 has precise month 2.33
-        # and task2 has 2.66.
+        # Group task by (month, category) and also get min and max date.
         month_category_to_tasks = defaultdict(list)
         set_fake_id = False
+        min_date = None
+        max_date = None
         for i in xrange(len(tasks)):
             task = tasks[i]
+            min_date = task.task_date if not min_date else min(
+                min_date, task.task_date)
+            max_date = task.task_date if not max_date else max(
+                max_date, task.task_date)
 
             # NOTE: If id is not set in task, we set a fake one, which is used
             # for lookup and will be deleted later.
@@ -147,23 +151,30 @@ class Scheduler(object):
             month_category_to_tasks[
                 (task.task_date.month, task.category)].append(task)
 
+        # For each task, calculate "precise month" for it, e.g. in 2nd month,
+        # there are 2 tasks for category C, then task1 has precise month 2.33
+        # and task2 has 2.66.
+        # NOTE: 2nd month could be any month (10, 12), but the precise month is
+        #       always 2.xx.
         id_to_precise_month = {}
         for month_category, task_buckets in month_category_to_tasks.iteritems():
             for i in xrange(len(task_buckets)):
                 id_to_precise_month[task_buckets[i].id] = (
-                    float(month_category[0]) +
+                    self._minus_month(task_buckets[i].task_date, min_date) +
                     1.0 * (i + 1) / (len(task_buckets) + 1))
 
         # Adjust date for each task.
-        adjusted_month_span = 12.0 / num_months
+        adjusted_month_span = (
+            (1.0 * self._minus_month(max_date, min_date) + 1) /
+            len(adjusted_months))
         for i in xrange(len(tasks)):
             precise_month = id_to_precise_month[tasks[i].id]
-            adjusted_month_index = int(
-                (precise_month - 1) / adjusted_month_span)
+            adjusted_month_index = int(precise_month / adjusted_month_span)
             tasks[i].task_date = adjusted_months[adjusted_month_index]
 
             if set_fake_id:
                 del tasks[i].id
+
         return tasks
 
     def _increment_month_and_clear_day(self, date, i):
@@ -171,6 +182,16 @@ class Scheduler(object):
         m = q + 1
         y = date.year + p
         return datetime.date(y, m, 1)
+
+    def _minus_month(self, date1, date2):
+        """Returns month diff of date1 - date2. """
+        min_date = min(date1, date2)
+        max_date = max(date1, date2)
+
+        d_year = max_date.year - min_date.year
+        d_month = max_date.month - min_date.month
+        d = d_year * 12 + d_month
+        return d if date1 == max_date else -d
 
     def _read_csv(self, filename):
         with open(filename, 'r') as f:
