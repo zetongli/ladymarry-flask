@@ -38,10 +38,11 @@ class Scheduler(object):
             tasks, task_index_to_task_indices = self._read_tasks(user)
 
             # Set up related tasks.
-            for index, indices in task_index_to_task_indices.iteritems():
-                task = tasks[index]
-                for k in indices:
-                    task.related_tasks.append(tasks[k])
+            # TODO: Enable this once content is correct.
+            # for index, indices in task_index_to_task_indices.iteritems():
+            #     task = tasks[index]
+            #     for k in indices:
+            #         task.related_tasks.append(tasks[k])
 
             # Set up series tasks.
             title_to_series_tasks = defaultdict(list)
