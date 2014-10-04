@@ -86,6 +86,8 @@ class Scheduler(object):
                 image=row[7],
                 position=i,
                 owner=user)
+            assert self._is_task_valid(task)
+                
             tasks.append(task)
             if row[6]:
                 task_index_to_task_indices[i] = [int(k.strip()) - 2
@@ -193,6 +195,16 @@ class Scheduler(object):
         d_month = max_date.month - min_date.month
         d = d_year * 12 + d_month
         return d if date1 == max_date else -d
+
+    def _is_task_valid(self, task):
+        if task.resource:
+            resources = task.resource.split(',')
+            for resource in resources:
+                r = resource.split('|')
+                if len(r) != 2:
+                    print 'Invalid resources: %s' % task.resource
+                    return False
+        return True
 
     def _read_csv(self, filename):
         with open(filename, 'r') as f:
