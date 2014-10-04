@@ -7,7 +7,7 @@ def create_app(settings_override=None):
     """Returns the frontend application instance. """
     app = factory.create_app(__name__, __path__, settings_override)
 
-    app.static_folder = 'wedding-checklist-fe'
+    app.static_folder = './'
 
     return app
 
