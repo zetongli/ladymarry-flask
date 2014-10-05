@@ -84,7 +84,7 @@ class Scheduler(object):
                 description=row[3],
                 tutorial=row[4],
                 resource=row[5],
-                image=row[6],
+                image=('/img/%s' % row[8]) if row[8] else row[7],
                 position=i,
                 owner=user)
             assert self._is_task_valid(task)
