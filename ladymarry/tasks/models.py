@@ -66,6 +66,7 @@ class Scenario(ScenarioJsonSerializer, db.Model):
     title = db.Column(db.String(255))
     when = db.Column(db.Text())
     description = db.Column(db.Text())
+    image = db.Column(db.String(255))
 
 
 # Task.
