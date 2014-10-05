@@ -26,6 +26,9 @@ class ClearDBCommand(Command):
 
 
 class SeedDBCommand(Command):
+    """This command is used to init data, test user in db assuming
+    db is empty.
+    """
     def run(self):
         # Create scenarios.
         scenarios.init_scenarios()
@@ -41,3 +44,29 @@ class SeedDBCommand(Command):
         tasks.schedule_tasks_for_user(user)
 
         print 'Success!'
+
+class RefreshDataCommand(Command):
+    """This command is used to refresh content data while keeping existing
+    users.
+    NOTE: Right now all tasks will be refreshed for existing users.
+    """
+    def run(self):
+        # Delete all tasks.
+        for user in users.all():
+            for task in user.tasks:
+                tasks.delete(task)
+
+        # Delete all scenarios.
+        for scenario in scenarios.all():
+            scenarios.delete(scenario)
+
+        # Create scenarios.
+        scenarios.init_scenarios()
+
+        # Refresh data for each user.
+        for user in users.all():
+            tasks.schedule_tasks_for_user(user)
+
+        print 'Success!'
+        
+            

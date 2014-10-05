@@ -14,3 +14,4 @@ celery
 python-dateutil
 simplejson
 redis
+alembic
