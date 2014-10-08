@@ -68,36 +68,19 @@ def update():
 @jwt_required()
 def get_tasks_for_user():
     scenario_id = request.args.get('scenario_id', None)
-    default_group_series_tasks = (scenario_id != None)
-    group_series_tasks = request.args.get(
-        'group_series_tasks', default_group_series_tasks)
-
     if not scenario_id:
-        tasks = users.current_user().tasks.order_by(
+        return users.current_user().tasks.order_by(
             Task.task_date, Task.category, Task.position).all()
     else:
-        tasks = users.current_user().tasks.filter(
+        return users.current_user().tasks.filter(
             Task.scenarios.any(Scenario.id==scenario_id)).order_by(
                 Task.task_date, Task.category, Task.position).all()
 
-    if group_series_tasks:
-        # Remove series tasks except the 1st one.
-        res = []
-        for task in tasks:
-            if task.series_tasks:
-                if not task.title.endswith(' I'):
-                    continue
-                task.title = task.title.replace(' I', '')
-            res.append(task)
-        return res
 
-    return tasks
-
-
+# TODO: Verify params.
 @route(bp, '/me/tasks', methods=['POST'])
 @jwt_required()
 def create_tasks_for_user():
-    # TODO: Verify params.
     params = request.json
 
     # Check and set owner_id if needed.
@@ -121,36 +104,18 @@ def get_single_task(task_id):
     return tasks.get_or_404(task_id)
 
 # TODO: Verify params.
-# TODO: Series tasks are not handled correct always.
 @route(bp, '/me/tasks/<task_id>', methods=['PUT'])
 @jwt_required()
 def update_task(task_id):
     # Right now, series_tasks can't be updated.
     params = request.json
     params.pop('series_tasks', None)
-
-    origin_task = tasks.get_or_404(task_id)
-    task = tasks.update(origin_task, **params)
-
-    # If unseries attrs aren't updated, update series tasks (if any) as well.
-    unseries_attrs = ['id', 'task_date', 'position', 'title']
-    if all(getattr(task, attr) == getattr(origin_task, attr)
-           for attr in unseries_attrs):
-        for attr in unseries_attrs:
-            params.pop(attr, None)
-        for series_task in task.series_tasks:
-            tasks.update(series_task, **request.json)
-    return task
+    return tasks.update(tasks.get_or_404(task_id), **params)
 
 @route(bp, '/me/tasks/<task_id>', methods=['DELETE'])
 @jwt_required()
 def delete_task(task_id):
-    task = tasks.get_or_404(task_id)
-    # Delete series tasks if any.
-    for series_task in task.series_tasks:
-        tasks.delete(series_task)
-    tasks.delete(task)
-
+    tasks.delete(tasks.get_or_404(task_id))
 
 # Related tasks APIs.
 @route(bp, '/me/tasks/<task_id>/related_tasks')
