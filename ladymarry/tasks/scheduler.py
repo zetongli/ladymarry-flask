@@ -26,7 +26,7 @@ class Scheduler(object):
                 title=row[0],
                 when=row[1],
                 description=row[2],
-                image='/img/%s' % row[4])
+                image='/server/img/%s' % row[4])
 
     def schedule_tasks(self, user, create_when_no_task=True):
         """Initializes all tasks for a new user. """
@@ -84,7 +84,7 @@ class Scheduler(object):
                 description=row[3],
                 tutorial=row[4],
                 resource=row[5],
-                image=('/img/%s' % row[8]) if row[8] else row[7],
+                image=('/server/img/%s' % row[8]) if row[8] else row[7],
                 position=i,
                 owner=user)
             assert self._is_task_valid(task)
