@@ -4,7 +4,7 @@ from passlib.apps import custom_app_context as pwd_context
 from flask_jwt import current_user
 
 from ..core import Service
-from .models import User
+from .models import User, WaitingUser
 
 
 class UsersService(Service):
@@ -34,3 +34,7 @@ class UsersService(Service):
 
     def verify_password(self, user, password):
         return pwd_context.verify(password, user.password)
+
+
+class WaitingUsersService(Service):
+    __model__ = WaitingUser

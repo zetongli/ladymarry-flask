@@ -1,4 +1,4 @@
-import logging
+import datetime, logging
 
 from flask import Blueprint, abort, request
 from flask_jwt import generate_token, jwt_required
@@ -7,7 +7,7 @@ from werkzeug.datastructures import MultiDict
 from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
 from ..models import Scenario, Task
-from ..services import scenarios, tasks, users
+from ..services import scenarios, tasks, users, waiting_users
 from . import route
 
 logging.basicConfig(level='INFO')
@@ -123,3 +123,19 @@ def delete_task(task_id):
 def get_related_tasks(task_id):
     task = tasks.get_or_404(task_id)
     return task.related_tasks.all()
+
+
+# Temporary API.
+# TODO: Remove once it's not used.
+@route(bp, '/invite', methods=['POST'])
+def invite():
+    email = request.json.get('email', None)
+    if not email:
+        raise LadyMarryError('Email is required for invitation.')
+
+    u = waiting_users.first(email=email)
+    if not u:
+        u = waiting_users.create(email=email,
+                                 registered_at=datetime.datetime.now())
+    return u
+        
