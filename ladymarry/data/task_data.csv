@@ -1,4 +1,4 @@
-Category (required),Title (required),Date (required),,Tutorial (How-to),"Resource (title1|url1,title2|url2,title3|url3...)",Related tasks (row number separated by comma),Image,Image file name,,
+Category (required),Title (required),Date (required),,Tutorial (How-to),"Resource (title1|url1,title2|url2,title3|url3...)",Related tasks (row number separated by comma),Image,Image file name,Image changed or not,
 Overall,Pick the date & city I,1/1/2015,The first question everyone will ask you when they hear you're engaged is where and when is the wedding. So talk it out: destination wedding or someplace local? Fall or spring?,"1. Take weather, seasoning, budget into account
 2. Focus on what you want your wedding day to be and how to portray that in a date
 3. Give yourself plenty of time to plan your dream wedding and don't rush it!
@@ -17,24 +17,26 @@ Overall,Decide on a budget,1/1/2015,"Talk about who will pay for what. You might
      - Planner or Coordinator 10-15%
      - Miscellaneous (Invitations, Officiant Fees, Favors, Etc.) 10%
      - Cushion 5%","Wedding Budget Calculator - Jenn Lane Design|http://jennlanedesign.com/wedding-budget-calculator.php,Wedding Timeline and Budget - Brides|http://www.brides.com/wedding-answers-tools/wedding-timeline-budget","3,16,17,24,25,26",http://thepeachpost.files.wordpress.com/2013/01/budget.jpg,,Changed,
-Overall,Choose wedding party,1/1/2015,Now it's time to start choosing your wedding party (groan...). This should be an exciting task -- a chance to round up your very favorite people to surround you on the happiest day of your life. ,"1. Wait to ask until you've set your wedding date. Adding bridesmaids is a lot more fun than demoting them.
-2. Don't feel like you have to include all the siblings
-3. Have ""bridesmen"" and ""groomsgirls"", if you'd like to give your bro an important role.
-4. Redefine the roles and number.  If you want to have 2 ""maids"" or 3 ""matrons"" or no one ""of honor,"" do what works for you
-5. Ask other friends and relatives to act as candlelighters, ushers, etc",6 DOs and DON'Ts That Will (Hopefully!) Make Choosing Your Wedding Party a Little Less Painful - Glamour|http://www.glamour.com/weddings/blogs/save-the-date/2012/02/6-dos-and-donts-that-will-hope,"14,18,77,78,79,81,82,83",http://lh4.ggpht.com/N5s-LfgiP-C4HXHRcOK1Ip4xOflxC_p0VjULaaQNpbtCmKFg_TO3ILimWUey7wqU8DZRBbSBmguuYuffqWSnDNA=s0,,,
-Overall,Choose wedding planners I,1/1/2015,"It's not required but consider hiring one if you: want a destination wedding, have a busy job, or like the idea of a third person (expert) opinion. Sound like you? Research and set up interviews.","1. Ask friends if they can recommend some 
+Overall,Choose wedding party,2/1/2015,Choosing your wedding party is a chance to round up your very favorite people to surround you on the Big Day!,"1. Wait to ask until you've set your general wedding date (preferred and some alternatives). Adding bridesmaids is a lot more fun than demoting them.
+2. Have ""bridesmen"" and ""groomsgirls"", if you'd like to give your bro an important role.
+3. Redefine the roles and number.  If you want to have 2 ""maids"" or 3 ""matrons"" or no one ""of honor,"" do what works for you
+4. Ask other friends and relatives to act as candlelighters, ushers, etc",6 DOs and DON'Ts That Will (Hopefully!) Make Choosing Your Wedding Party a Little Less Painful - Glamour|http://www.glamour.com/weddings/blogs/save-the-date/2012/02/6-dos-and-donts-that-will-hope,"14,18,77,78,79,81,82,83",http://lh4.ggpht.com/N5s-LfgiP-C4HXHRcOK1Ip4xOflxC_p0VjULaaQNpbtCmKFg_TO3ILimWUey7wqU8DZRBbSBmguuYuffqWSnDNA=s0,,,
+Overall,Choose wedding planners I,1/1/2015,"It's not required but consider hiring one if you: want a destination wedding, have a busy job, or like the idea of a third person (expert) opinion. ","1. Ask friends if they can recommend some 
 2. Research online to find 5 finalists to schedule a talk by phone or in-person
-3. Interview them with the questions, i.e. “How do you communicate with clients?”;“How many clients do you have in a year, and in my wedding month?”;“Do you work alone or with a team?”;“What additional fees do I need to know about?”","Wedding Planning: 6 Crucial Questions To Ask A Wedding Planner
+3. Interview them with the questions:
+    - How do you communicate with clients?
+    - How many clients do you have in a year, and in my wedding month?
+    - Do you work alone or with a team?
+    - What additional fees do I need to know about?","Wedding Planning: 6 Crucial Questions To Ask A Wedding Planner
  - Huffington Post|http://www.huffingtonpost.com/2012/06/14/wedding-planning_n_1597953.html","6,25,26,49,64,68",http://www.jukeboxxmedia.com/wp-content/uploads/2012/07/wedding-timeline.jpg,hire_wedding_planner.jpg,,
-Overall,Choose wedding planners II,2/1/2015,"Finish interviewing your top picks, and then make a decision. Your planner's personality and how well you work together should be key. Once you decide, sign the contract and put down a deposit.","1. Confirm Insurance coverage, services included and timeline
+Overall,Choose wedding planners II,2/1/2015,"Finish interviewing your top picks, and then make a decision. Your planner's personality and how well you work together should be key. ","1. Confirm Insurance coverage, services included and timeline
 2. Disucuss rehearsal and other parties around wedding day
 3. Schedule payment and sign contract
 4. Schedule progress meetings",Wedding coordinator vs. Venue coordinator - La Dolce Idea|http://ladolceidea.wordpress.com/2010/06/05/instructions-for-use-wedding-coordinator-vs-venue-coordinator/,"5,25,26,49,64,68",http://michellewein.files.wordpress.com/2012/04/wedding20planner.jpg,hire_wedding_planner.jpg,,
-Overall,Decide on colors/theme,2/1/2015,Romantic wedding? Think pastels and neutrals. A high-energy party? Go bold. Save your favorite colors to your helpers and they will affect a host of decisions.,"1.Use your favorite shade. You’ve been in love with pale lavender since the first grade, so this is a good place to begin – with what you love. You can tastefully incorporate any color into your wedding decorations by selecting the right hue, and combining it with the right accents.
-2.Consider the setting. Look at the colors used in your venue’s carpeting, drapery and decorations. If the site has strong colors, you’ll need to select a color scheme that complements. If you already have your heart set on a certain color, you may need to select a more neutrally decorated site but this needs to be sorted out very early on or you may miss out on a good location! However, keep an open mind about colors until you've chosen the venue, because the setting may well suggest the color scheme for you.
-3.Be prepared to have two different/distinct color themes if your church or wedding building and reception venue are very different in tone. In general, it is probable that you will have more leeway to use colors with the reception than where the wedding ceremony itself is held. However, you can still carry the color theme in clothing and flowers from the place of marriage to the reception, even if you can't decorate the church, town hall, or register office as much as you'd like.
-4.Enlist your favorite bloom. If sunflowers are your thing, there’s no reason why they shouldn’t make it into your décor scheme. Incorporate your predominant flower color – either making it the dominant shade or using it as an accent – and it will all come together.
-","Fotavo|http://www.fotavo.com/homepage,TheKnot|http://wedding.theknot.com/wedding-themes.aspx,What’s your wedding style? - magnetStreet|http://www.magnetstreet.com/wedding-style-quiz","16,17,24,25,59",http://lh5.ggpht.com/7Z69ltA5Vear9d2SFNeBpcn1rrkZsoDmrvg9pr-OZpOVydP5cFuEDngKOlXiFfHPheEBqHoDpCvIp6XiJWKROQ=s0,,Changed,
+Overall,Decide on colors/theme,2/1/2015,Romantic wedding? Think pastels and neutrals. A high-energy party? Go bold for the Day!,"1.Discuss your favorite shade and bloom with your wedding party and planner (if you have). 
+2.Consider the setting. Look at the colors used in your venue’s carpeting, drapery and decorations. Keep open-minded about colors until you've chosen the venues.
+3.Be prepared to have two different color themes if your ceremony and reception venue are very different in tone. 
+","Color Palette|http://paletton.com,Fotavo|http://www.fotavo.com/homepage,TheKnot|http://wedding.theknot.com/wedding-themes.aspx,What’s your wedding style? - magnetStreet|http://www.magnetstreet.com/wedding-style-quiz","16,17,24,25,59",http://lh5.ggpht.com/7Z69ltA5Vear9d2SFNeBpcn1rrkZsoDmrvg9pr-OZpOVydP5cFuEDngKOlXiFfHPheEBqHoDpCvIp6XiJWKROQ=s0,,Changed,
 Overall,Pick the date & city II,3/1/2015,Finalize a date both practical and personal based on your preference and venues.,"1. Check with the top-tier guests
 2. Check with venues and your most important service professionals
 3. Double check the no-no days, i.e. the weekend before tax day
@@ -106,9 +108,7 @@ Attire & Beauty,Buy wedding rings,8/1/2015,"You'll want to give yourselves a cou
 Attire & Beauty,Have your fitting I,9/1/2015,It's a good idea to bring one person (your mom or a friend) along with you for this. That way they can weigh in on how the dress fits you and make you feel more comfortable during the appointment.,"1. Ask at least one people to come along
 2. Bring essentials to the fitting
 3. Schedule the next fitting","Bridal Fittings 101: advice from a former tailor shop employee - Offbeat Bride|http://offbeatbride.com/2009/12/bridal-fitting-advice,All You Need to Know About Wedding Dress Fittings - Brides|http://www.brides.com/wedding-dresses-style/wedding-dresses/2009/07/all-you-need-to-know-about-wedding-dress-fittings","24,34",http://chic-dresses.com/pdata/t/l-4161.jpg,have_your_fitting.jpg,,
-Attire & Beauty,Buy dress essentials,9/1/2015,What you wear under the dress is almost just as important to looking good as the gown itself. Ideally you’ll want to buy before your first fitting.,"1. Buy essentials for under the dress
-2. Ask your wedding party if they also need some",Under the Dress Essentials - TheKnot|http://wedding.theknot.com/bridal-fashion/wedding-accessory-jewelry/articles/under-thewedding-dress-lingerie-essentials.aspx?page=2,24,http://www.syahdiar.com/wp-content/uploads/2014/08/bridal-lingerie-what-you-should-wear-under-wedding-dress-53dc30236a621.jpg,What exact is this?,,
-Attire & Beauty,Buy formalwear extras,8/1/2015,The type of formalwear usually dictates the accessories -- but this is the place to show some style. Find a tie that sets him apart from the and splurge on a great pair of dress shoes.,"1. Tie
+Attire & Beauty,Buy men's attire extras,8/1/2015,The type of men's attire usually dictates the accessories -- but this is the place to show some style. Find a tie that sets him apart from the and splurge on a great pair of dress shoes.,"1. Tie
 2. Shoes & socks
 3. Cuff links
 4. Cummerbund / vest",Top Five Grooms & Groomsmen Trends for 2014 - Chic Vintage Brides|http://chicvintagebrides.com/index.php/groom-groomsmen/grooms-groomsmen-trends-2014/,26,,,,
@@ -124,8 +124,8 @@ Attire & Beauty,Buy dress accessories,10/1/2015,The right jewelry and shoes comp
 7. Handbag
 8. Sashes
 9. Jewelry (necklace,earings, bracelet)",Dress Accessories - Fotavo|http://www.fotavo.com/photos/photob3qPWhonKw1zfA0MGQ6mxdv9a7jSOtuHy8gF4YRe,24,http://lh4.ggpht.com/fWp3l9eD6FDjWaIISvR0v6pvBPSs0VVguwTQLZnXgQx4gBnhiDMqTcyXsg0peqQL0sPT0UlLecL_CQwBKlyRr1E=s0,,,
-Attire & Beauty,Have your fitting II,11/1/2015,"Have Your Last Dress Fitting There might be some butterflies at this appointment. It's totally normal! At this point, your dress should fit you nice and tight and all of your accessories should look just right.","1. Ask at least one people to come along
-2. Schedule the pick-up
+Attire & Beauty,Have your fitting II,11/1/2015,"Have Your Last Dress Fitting. At this point, your dress should fit you nice and tight and all of your accessories should look right.","1. Ask at least one people to come along
+2. Schedule the pick-up (at least 1 week before the Day is recommended)
 3. Arrange post-wedding maintainance ","Make Your Wedding Fitting Fabulous - Boston Magazine|http://www.bostonmagazine.com/weddings/blog/2013/02/15/make-your-wedding-fitting-fabulous/,Wedding Dress Fitting - Wedding Chaos|http://www.weddingchaos.co.uk/brides-dress/wedding-dress-fitting.asp",29,http://easyweddings-wordpress.s3.amazonaws.com/wp-content/uploads/sites/5/2014/01/187958426.jpg,have_your_fitting.jpg,,
 Guest & Guestlist,Make guest list,2/1/2015,"Start with immediate family and friends, then move on to the rest of the invitees in order of importance. ","1. Decide on the guest count and divide it in half to both families
 2. Establish priority with families
@@ -148,16 +148,21 @@ Guest & Guestlist,Save invitation photos,4/1/2015,Find gorgeous invitation photo
 Guest & Guestlist,Block out hotel rooms,5/1/2015,"You might want to start with fewer rooms and then add more if needed (some hotels require you to pay for rooms that go un-booked). Also, don’t forget to add hotel contact info to your wedding website!","1. Estimate your rooms and ask hotels if the number makes sense
 2. Make sure the payment policy before you block the rooms
 3. Check the details of check-in, check-out time, transportation schedule if needed","Questions To Ask When Blocking Hotel Rooms For Your Wedding Guests - GroupTravel|http://grouptravel.org/wedding/questions-to-ask-when-blocking-hotel-rooms-for-your-wedding-guests/,Need a Hotel For Wedding Guests? - GroupTravel|http://grouptravel.org/need-a-hotel-for-wedding-guests/","11,41",,,,
-Guest & Guestlist,Research stationery designers,5/1/2015,The first impression that guests will receive of your wedding will come from the invitations.Designers help you embed your unique stories into stationery.,"1. Share your saved photos with the designers
+Guest & Guestlist,Book stationery designers,5/1/2015,The first impression that guests will receive of your wedding will come from the invitations.Designers help you embed your unique stories into stationery.,"1. Share your saved photos with the designers
 2. Confirm the designs, paper, printing options and make payment
 3. Provide final wording and review proofs",10 Designers to Watch in 2014 - Stationary Trends|http://stationerytrendsmag.com/index.php/magazine/article/10-designers-to-watch-in-2014,"8,38,41,42,48",,,,
-Guest & Guestlist,Order save-the-dates,6/1/2015,"If you have a designer in mind (local or online), now is the time to order. Going the DIY route? Buy the supplies and start working. You'll want to mail them between six and eight months beforehand.","1. Order extra 10
-2. Oder stamps",Wedding Invitation Q&As - Bridal Guides|http://www.bridalguide.com/etiquette/etiquette-qas/wedding-invitation-etiquette,40,http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,,,
-Guest & Guestlist,Order your invitations,6/1/2015,Make your final design picks and order those invites. You’ll finalize the wording at this time too. Also think about how you want to address them (calligraphy?) and don’t forget the stamps!,"1. Order extra 10
-2. Oder stamps","How to Address the Envelopes - TheKnot|http://wedding.theknot.com/wedding-planning/wedding-invitations/articles/addressing-wedding-invitations.aspx,Assembling Wedding Invitations: Wedding Invitation Etiquette - DAWN|http://www.invitationsbydawn.com/custserv_content.jsp?pageName=Assembling-Wedding-Invitations",40,http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,,,
+Guest & Guestlist,Order save-the-dates,6/1/2015,"If you have a designer in mind (local or online), now is the time to order. Going the DIY route? Buy the supplies and start working. You'll want to mail them between six and eight months beforehand.","1. Save save-the-dates photos
+2. Discuss ideas with your stationery designer if needed
+3. Confirm the delivery time 
+4. Order extra 10 pieces
+5. Order stamps if you want to mail them",Wedding Invitation Q&As - Bridal Guides|http://www.bridalguide.com/etiquette/etiquette-qas/wedding-invitation-etiquette,40,http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,,,
+Guest & Guestlist,Order your invitations,6/1/2015,Make your final design picks and order those invitations. You’ll finalize the wording at this time too. Also think about how you want to address them (calligraphy?) and don’t forget the stamps!,"1. Discuss ideas with your stationery designer if needed
+2. Confirm the delivery time 
+3. Order extra 10 pieces
+4. Order stamps if you want to mail them","How to Address the Envelopes - TheKnot|http://wedding.theknot.com/wedding-planning/wedding-invitations/articles/addressing-wedding-invitations.aspx,Assembling Wedding Invitations: Wedding Invitation Etiquette - DAWN|http://www.invitationsbydawn.com/custserv_content.jsp?pageName=Assembling-Wedding-Invitations",40,http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,,,
 Guest & Guestlist,Send save-the-dates,7/1/2015,This is one of those milestones that makes the planning you've done so far feel really real! Get them out by the six month mark (more like eight months if you have a lot of out-of-town guests).,"1. Compile list of names and addresses for all invitees
 2. Book a calligrapher if you prefer",Wedding Invitation Q&As - Bridal Guide|http://www.bridalguide.com/etiquette/etiquette-qas/wedding-invitation-etiquette,"35,51,53",http://lh3.ggpht.com/3uWdBHTqqFW3zPNjZWViLujSURcvtKThHsuPelOdXAL9BEeWFcIZ0O-NjfpdoCIafJIK6vlVBnpMfhBfMtAR0g=s0,send_saved_the_date.jpg,,
-Guest & Guestlist,Mail your invites,9/1/2015,"Get them out by the three-month mark. If you don't want the post office to add a giant stamp across the front of the envelope, you can ask to have them hand-canceled.","1. Take a completely assembled invitations
+Guest & Guestlist,Mail invitation,9/1/2015,"Get them out by the three-month mark. If you don't want the post office to add a giant stamp across the front of the envelope, you can ask to have them hand-canceled.","1. Take a completely assembled invitations
 2. Buy stamps for invitation and response envelopes",Wedding Invitation Q&As - Bridal Guide|http://www.bridalguide.com/etiquette/etiquette-qas/wedding-invitation-etiquette,"35,41",http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,,,
 Guest & Guestlist,Plan transportation,10/1/2015,"A vintage car? A horse-drawn carriage, or a bicycle built for two? Make excitement and convenience.","1. Arrange date, time, and locations of pickup and drop-off points
 2. Select type and number of vehicles rented
@@ -214,11 +219,11 @@ Flower & Decor,Book florist ,6/1/2015,"A qualified florist can help you narrow d
 6. Confirm date, time, delivery and locations with florist",Florist - Fotavo|http://www.fotavo.com/photos/photobvOQZSAJCiezaEckIXYs39Md68tBRmn05DgwKyxT,"8,71",http://lh4.ggpht.com/dE4gQ5e4PVTUsyYIM8MNgwzN-4Osv5IOXjCwaCXMSzR42EokZl2VJ0LEPW80Pdl7uX9hjLW7dJt75_WmQM85XY7M=s0,,,
 Flower & Decor,Save decor photos ,9/1/2015,,"1. Save photos online and on magazines
 2. Consider enhance some by candles, lanterns, etc",,"8,57,59",http://lh4.ggpht.com/PoLreeQtls29LDRnYD8rq3p9OhFw9fbwL_yiDlIxaegpzUHQk7UxO7saH-x1cwRQG0Hk-WxOg4KNvEIHpOkmxLk=s0,,,
-Flower & Decor,DIY projects I,10/1/2015,"Ask friends,family to join the fun projects!","1. Save decor photos
+Flower & Decor,DIY projects I,10/1/2015,"Ask friends,family to join the fun projects!","1. Save decor photos for ceremony
 2. Check how to make them real
 3. Invite others to join the projects
 4. Don't make the schedule stressful",Lace Up Your Wedding: 6 DIY Projects - BRIT+CO|http://www.brit.co/lace-up-your-wedding-6-diy-projects/,52,http://pixel.brit.co/wp-content/uploads/2012/03/TableRunner2.jpg,,,
-Flower & Decor,DIY projects II,11/1/2015,"Ask friends,family to join the fun projects!","1. Save decor photos
+Flower & Decor,DIY projects II,11/1/2015,"Ask friends,family to join the fun projects!","1. Save decor photos for reception
 2. Check how to make them real
 3. Invite others to join the projects
 4. Don't make the schedule stressful",Lace Up Your Wedding: 6 DIY Projects - BRIT+CO|http://www.brit.co/lace-up-your-wedding-6-diy-projects/,52,http://pixel.brit.co/wp-content/uploads/2012/03/TableRunner2.jpg,,,
@@ -239,20 +244,22 @@ Parties & Entertainment,Take dance lessons,8/1/2015,"If you dread the idea of al
 Parties & Entertainment,Have your rehearsal,12/1/2015,"Because you might not have time for it on the wedding day (it oftentimes feels like a blur), use this time to really catch up with everyone and welcome friends and family.","1. Meet and greet
 2. Exchange gifts
 3. Toast
-4. Remind friendly about the day-of","Wedding Rehearsals: Rehearsal Dinner Basics - TheKnot|http://wedding.theknot.com/wedding-planning/rehearsal-dinner/articles/wedding-rehearsal-basics.aspx,Rethinking Rehearsal Dinners - Here Comes The Guide|http://www.herecomestheguide.com/wedding-party-ideas/detail/rethinking-rehearsal-dinners/","4,12,65",https://pwng.s3.amazonaws.com/1384272838_content_rehearsal-dinner-table.jpg,,,
+4. Remind friendly about the day-of timeline and deligation","Wedding Rehearsals: Rehearsal Dinner Basics - TheKnot|http://wedding.theknot.com/wedding-planning/rehearsal-dinner/articles/wedding-rehearsal-basics.aspx,Rethinking Rehearsal Dinners - Here Comes The Guide|http://www.herecomestheguide.com/wedding-party-ideas/detail/rethinking-rehearsal-dinners/","4,12,65",https://pwng.s3.amazonaws.com/1384272838_content_rehearsal-dinner-table.jpg,,,
 Parties & Entertainment,Have bachelor(ette) parties,12/1/2015,A welcome party is a is hands-down a great way to get all your guests mixing and mingling early! It can replace a traditional rehearsal dinner or be added on to the end of one. ,"1. Meet and greet
 2. Exchange gifts
 3. Toast
 4. Remind friendly about the day-of things",,"4,49,64",,,,
-Music,Book DJ / band,7/1/2015,"Music helps set the mood for the entire wedding, and highlights certain moments.","1. Interview 3-5 finalists
+Music,Book DJ / band,7/1/2015,"Music helps set the mood for the entire wedding, and highlights certain moments.","1. Interview 2-3 finalists
 2. Ask their suggestions to fit your wedding
 3. Ask if they will be the master of reception
-4. Confirm payment schedule and sign the contract","Questions to Ask a DJ - mydeejay|http://mydeejay.com/wedding-advice/questions-to-ask-a-dj-wedding,15 Questions You Gotta Ask Wedding DJs - j'adoreDJs|http://www.jadoredjs.com/15-questions-ask-wedding-djs","7,16,66",http://lh5.ggpht.com/T4ysWGftTBecdIEXPjwSsHUhCpFE9FwgmJE0JS2IIaOhe4ouGqKFFBiz2hIJPfuypsZNMwtgm8w9CG5RrOHE50M=s0,,,
+4. Confirm payment schedule and sign the contract
+5. Confirm the song list with timeline","Questions to Ask a DJ - mydeejay|http://mydeejay.com/wedding-advice/questions-to-ask-a-dj-wedding,15 Questions You Gotta Ask Wedding DJs - j'adoreDJs|http://www.jadoredjs.com/15-questions-ask-wedding-djs","7,16,66",http://lh5.ggpht.com/T4ysWGftTBecdIEXPjwSsHUhCpFE9FwgmJE0JS2IIaOhe4ouGqKFFBiz2hIJPfuypsZNMwtgm8w9CG5RrOHE50M=s0,,,
 Music,Book ceremony musicians,7/1/2015,Traditional organ? Or modern DJ music? Put together a budget for your ceremony music and then start your search. ,"1. Interview 2-3 options
 2. Ask their suggestions to fit your wedding
 3. Check if they need sheet music or equipment
 4. Confirm payment schedule and sign the contract
-5. Go through the details with site coordinator and officiant, i.e. timing",Practical Advice from Art-Strings - Art-Strings|http://www.art-strings.com/faq.htm,"7,17",,,,
+5. Go through the details with site coordinator and officiant, i.e. timing
+6. Confirm the song list with timeline",Practical Advice from Art-Strings - Art-Strings|http://www.art-strings.com/faq.htm,"7,17",,,,
 Catering & Cake,Book caterer,5/1/2015,Treat your guests with a set of delicious food.,"1. Ask your venue if they recommend someones
 2. Make sure who is the chef on your day
 3. Ask to see the operating license or health permit
