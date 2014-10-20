@@ -1,4 +1,5 @@
-Category (required),Title (required),Date (required),,Tutorial (How-to),"Resource (title1|url1,title2|url2,title3|url3...)",Related tasks (row number separated by comma),Image,Image file name,Image changed or not,
+"
+",Title (required),Date (required),,Tutorial (How-to),"Resource (title1|url1,title2|url2,title3|url3...)",Related tasks (row number separated by comma),Image,Image file name,Image changed or not,
 Overall,Pick the date & city I,1/1/2015,The first question everyone will ask you when they hear you're engaged is where and when is the wedding. So talk it out: destination wedding or someplace local? Fall or spring?,"1. Take weather, seasoning, budget into account
 2. Focus on what you want your wedding day to be and how to portray that in a date
 3. Give yourself plenty of time to plan your dream wedding and don't rush it!
@@ -71,35 +72,36 @@ Venue,Book ceremony site II,3/1/2015,"If it’s a non-religious space, request a
 5. Ask how long is the aisle
 6. Confirm the payment schedule",,"7,9,14,44",http://lh3.ggpht.com/KmgJm6kMBF93uTtk1pb4HrPgVkZLyFVjS2CpvSM7ePz9137Cem598M15aAuqey6qdl2uzCholt4pmI7axFKfedM=s0,book_ceremony_site.jpg,,
 Venue,Book wedding night hotel room,5/1/2015,"When you call to make a reservation, be sure to mention that you're booking the room for your wedding night. You might get a free upgrade.",,How to book a block of hotel rooms for your wedding guests - Offbeat Bride|http://offbeatbride.com/2013/09/how-to-book-a-block-of-hotel-rooms,"9,16",http://www.jetfeteblog.com/wp-content/uploads/2012/12/luxury-honeymoon-hotels-nyc.jpg,,,
-Attire & Beauty,Save dress photos,2/1/2015,Choosing the most important - and likely the most expensive - ensemle you'll ever wear takes careful consideration.,,"Pinterest|http://www.pinterest.com,Fotavo|http://www.fotavo.com/homepage","7,8,21,23,24,25,26",http://lh5.ggpht.com/9PIuCpRWqhNKjIwdDIFY000osoZr6OvSSrJgiWVexiionqZ0ZslzoRdOX4t8XybhkTLqyUjhNvfRLPVWPAhbyW0=s0,,,
 Attire & Beauty,Insure your ring,1/1/2015,"Putting a policy on your engagement ring may sound unromantic, but the peace of mind is probably worth it. There are few different ways to do it, so read up below!","1. Get an appraisal for your ring
 2. Find out if an existing homeowners or rental policy will cover your engagement ring
 3. Locate a separate insurance policy for a ring that isn’t or can't be covered under an existing homeowners or rental insurance policy
 4. Choose a deductible
 5. Document ring photos and other paperwork","Insure Your Engagement Ring - WikiHow|http://www.wikihow.com/Insure-Your-Engagement-Ring,Engagement Ring Insurance 101 - TheKnot|http://wedding.theknot.com/getting-engaged/engagement-rings/articles/engagement-ring-insurance-101.aspx,Hot to Insure Your Engagement Ring - Brides|http://www.brides.com/blogs/aisle-say/2012/06/how-to-insure-your-engagement-ring.html",,http://lh5.ggpht.com/bi4Nk2ausUA8_ja_4h9txRaZEkTOQcmWBu9VwM78P5_waGq0DQ_vOVRTRrC5hGp8vmBm2Rw47h4V3VOdotnDBFI=s0,insure_your_rings.jpg,,
-Attire & Beauty,Try on wedding dresses I,3/1/2015,It's time to try on those styles you've been saving to your board! So grab your mom or best friend and make appointments at several stores. And give yourselves at least two hours at each store.,"1. Call shops in advance
-2. Be open to different styles 
-3. Wear your wedding-day undergarments to shops
-4. Buy the size that fits the biggest part of your body
-5. Bring a shopping buddy who has your best interest in mind","33 Crucial Tips To Find The Wedding Dress Of Your Dreams - BuzzFeed|http://www.buzzfeed.com/juliegerstein/wedding-dress-shopping-tips#1ueg0iz,How to find a wedding dress: 21 things I wish I'd known - Today Style|http://www.today.com/style/how-find-wedding-dress-21-things-i-wish-id-known-2D79793378",19,http://lh5.ggpht.com/Fgz9wLFkPyPD_eSwieOBq65Dy1Is4dgbe7Uf7wL9UslVxr0eZahAehw2egYbHfEn74AMkwFkehsBD-tD572-J_I=s0,try_on_wedding_dress.jpg,,
-Attire & Beauty,Try on wedding dresses II,4/1/2015,It's time to try on those styles you've been saving to your board! So grab your mom or best friend and make appointments at several stores. And give yourselves at least two hours at each store.,"1. Call shops in advance
-2. Be open to different styles 
-3. Wear your wedding-day undergarments to shops
-4. Buy the size that fits the biggest part of your body
-5. Bring a shopping buddy who has your best interest in mind","33 Crucial Tips To Find The Wedding Dress Of Your Dreams - BuzzFeed|http://www.buzzfeed.com/juliegerstein/wedding-dress-shopping-tips#1ueg0iz,How to find a wedding dress: 21 things I wish I'd known - Today Style|http://www.today.com/style/how-find-wedding-dress-21-things-i-wish-id-known-2D79793378",19,http://lh5.ggpht.com/9PIuCpRWqhNKjIwdDIFY000osoZr6OvSSrJgiWVexiionqZ0ZslzoRdOX4t8XybhkTLqyUjhNvfRLPVWPAhbyW0=s0,try_on_wedding_dress.jpg,,
-Attire & Beauty,Save makeup & hairstyle photos,5/1/2015,"When you envision yourself on wedding day, what do you see? Save hair and makeup ideas to your planner -- pick a variety of options to show your hairstylist and makeup artist during your trials.",1. Save makeup & hairstyle photos ,Pinterest|http://www.pinterest.com,"8,24,25",http://lh5.ggpht.com/HbCyhPw_A42_0U6eYGNUt1WNQQAUdxLQl6F4hYnCdKY2jFSmeQ9HE3L1m12bv_m4pVORp-9OmrXdkc23GXtJ65k=s0,save_makeup_hairstyle_photos.jpg,,
+Attire & Beauty,Try on wedding dresses I,3/1/2015,It's time to try on those styles you've been saving to your board! So grab your mom or best friend and make appointments at several stores. And give yourselves at least two hours at each store.,"1. Save photos of your dream dresses
+2. Call shops in advance
+3. Be open to different styles 
+4. Wear your wedding-day undergarments to shops
+5. Buy the size that fits the biggest part of your body
+6. Bring a shopping buddy who has your best interest in mind","33 Crucial Tips To Find The Wedding Dress Of Your Dreams - BuzzFeed|http://www.buzzfeed.com/juliegerstein/wedding-dress-shopping-tips#1ueg0iz,How to find a wedding dress: 21 things I wish I'd known - Today Style|http://www.today.com/style/how-find-wedding-dress-21-things-i-wish-id-known-2D79793378",19,http://lh5.ggpht.com/Fgz9wLFkPyPD_eSwieOBq65Dy1Is4dgbe7Uf7wL9UslVxr0eZahAehw2egYbHfEn74AMkwFkehsBD-tD572-J_I=s0,try_on_wedding_dress.jpg,,
+Attire & Beauty,Try on wedding dresses II,4/1/2015,It's time to try on those styles you've been saving to your board! So grab your mom or best friend and make appointments at several stores. And give yourselves at least two hours at each store.,"1. Save photos of your dream dresses
+2. Call shops in advance
+3. Be open to different styles 
+4. Wear your wedding-day undergarments to shops
+5. Buy the size that fits the biggest part of your body
+6. Bring a shopping buddy who has your best interest in mind","33 Crucial Tips To Find The Wedding Dress Of Your Dreams - BuzzFeed|http://www.buzzfeed.com/juliegerstein/wedding-dress-shopping-tips#1ueg0iz,How to find a wedding dress: 21 things I wish I'd known - Today Style|http://www.today.com/style/how-find-wedding-dress-21-things-i-wish-id-known-2D79793378",19,http://lh5.ggpht.com/9PIuCpRWqhNKjIwdDIFY000osoZr6OvSSrJgiWVexiionqZ0ZslzoRdOX4t8XybhkTLqyUjhNvfRLPVWPAhbyW0=s0,try_on_wedding_dress.jpg,,
 Attire & Beauty,Buy your dresses,5/1/2015,"You want to give yourself plenty of time to order the dress and then to have alterations and fitting appointments. Once you buy it, you’ll also want to schedule time for your first dress fitting.","1. Schedule payment and sign contract
 2. Ask delivery time
 3. Schedule the first fitting and ask recommendations of undergarments","Wedding Dress Shopping Countdown - TheKnot|http://wedding.theknot.com/bridal-fashion/wedding-dress-shopping/articles/wedding-gown-shopping-checklist.aspx,10 Wedding Dress Buying Mistakes to Avoid - eBay|http://www.ebay.com/gds/10-Wedding-Dress-Buying-Mistakes-to-Avoid-/10000000177632540/g.html","8,21,23,24,25,26",http://lh6.ggpht.com/0qwjt5ZR_BJbE61oU6Fiszw6v_oSnfEQyArv2n6ZIinXeogqSTq8TnycOHYNM2tBgmPJ-VfzNAzqgkD_JQrDYtU=s0,,,
 Attire & Beauty,Buy bridesmaid dresses,7/1/2015,"Once you have a good idea as to how you want them to look, take one or all of your bridesmaids dress shopping. Then make your pick!","1. Consider their personal preferences and concerns and your theme color
 2. Claify who pay for the attire first
 3. Send them color swatches if they select their own dresses","12 Tips for Choosing the Right Look - TheKnot|http://wedding.theknot.com/bridal-fashion/bridesmaid-dresses/articles/12-tips-for-choosing-the-right-bridesmaid-dresses.aspx,The First 5 Steps to Shopping for Bridesmaid Dresses - Real Simple|http://www.realsimple.com/weddings/dress-attire/bridesmaid-dress-shopping-00100000098651/","4,8,21,23,24",http://lh5.ggpht.com/cZwMa3hHi0qLc50d1Kn-2eD6c55iVxmVW3Xh1j_2ds3J8-qd2l3q0anRFQqVd5sLNdU7BxJteh4HsGyYWozE2YM=s0,buy_bridesmaid_dresses.jpg,,
-Attire & Beauty,Buy or rent men's attire,7/1/2015,"Tuxedos or suits? Decide what you want the guys to wear and how you want them to look. Hint: Usually time, place, and formality are the driving forces behind your choice.","1. Make appointments
-2. Be open to different styles 
-3. Ask tailoring
-4. Bring a shopping buddy who has your best interest in mind
-5. Confirm delivery and cancellation policy before purchase","How to Choose a Tuxedo for the Groom - WikiHow|http://www.wikihow.com/Choose-a-Tuxedo-for-the-Groom,I Do’s (and Don’ts) - For Choosing Your Formalwear Provider - TUXEGO|http://www.tuxego.com/i-dos-and-donts.php","4,8,25",http://lh6.ggpht.com/T4Zdwjt1oxXLuqJAIBX8dMcNV6PtIIbRSjbEdfuB6qVqpEVmel-WvIkxTb3Vx6L76DbEkb0697YfDjcFg-rqSPg=s0,buy_or_rent_mens_attire.jpg,,
-Attire & Beauty,Book beauty stylists,6/1/2015,You obviously want your hair to look impeccable and match your wedding theme.,"1. Save and share photos with stylists
+Attire & Beauty,Buy or rent men's attire,7/1/2015,"Tuxedos or suits? Decide what you want the guys to wear and how you want them to look. Hint: Usually time, place, and formality are the driving forces behind your choice.","1. Save photos of his dream attire
+2. Make appointments
+3. Be open to different styles 
+4. Ask tailoring
+5. Bring a shopping buddy who has your best interest in mind
+6. Confirm delivery and cancellation policy before purchase","How to Choose a Tuxedo for the Groom - WikiHow|http://www.wikihow.com/Choose-a-Tuxedo-for-the-Groom,I Do’s (and Don’ts) - For Choosing Your Formalwear Provider - TUXEGO|http://www.tuxego.com/i-dos-and-donts.php","4,8,25",http://lh6.ggpht.com/T4Zdwjt1oxXLuqJAIBX8dMcNV6PtIIbRSjbEdfuB6qVqpEVmel-WvIkxTb3Vx6L76DbEkb0697YfDjcFg-rqSPg=s0,buy_or_rent_mens_attire.jpg,,
+Attire & Beauty,Book beauty stylists,6/1/2015,You obviously want your hair to look impeccable and match your wedding theme.,"1. Save and share photos of your favorite styles with stylists
 2. Tell your allergy history
 3. Schedule trials with a few stylists. You can do one on the engagement photo day.
 4. Confirm payment scheule and sign the contract","Bridal Beauty: Brows that Wow - TheKnot|http://wedding.theknot.com/wedding-beauty-tips/bridal-beauty-secrets/articles/bridal-beauty-brows-that-wow.aspx,Bridal Beauty: Top Wedding Beauty Q&A - TheKnot|http://wedding.theknot.com/wedding-beauty-tips/bridal-beauty-secrets/articles/top-bridal-beauty.aspx",23,http://lh4.ggpht.com/A5HPgyz7BrqI-SC0YoqzGggagFAiDsQ-VutrxUFZxgRrCaYWAnaE-Gy3gIy8WklgPEB0O9MExoVHi4MAADtbGS2d=s0,book_beauty_stylists.jpg,,
@@ -142,13 +144,10 @@ Guest & Guestlist,Register for gifts,4/1/2015,You don't have to finish your regi
 2. Decide how much you want to register for
 3. Select items from stores and websites
 4. Share your registion with invitees","10 Gifts That Should Be On Your Wedding Registry - How Stuff Works|http://lifestyle.howstuffworks.com/weddings/family-gifts/wedding-registry-wedding-gifts/10-gifts-for-wedding-registry.htm,Top 24 Places to Register - Brides|http://www.brides.com/home-wedding-registry/registry-ideas-answers/2011/02/wedding-gift-registries-the-best-places-to-register,10 Tips on Registering for Wedding Gifts - TheKnot|http://wedding.theknot.com/online-wedding-registry/bridal-registry-tips/articles/10-tips-on-registering-for-wedding-gifts.aspx",,https://expertbeacon.com/sites/default/files/when_creating_your_wedding_registry_choose_gifts_you_want_and_need.jpg,register_for_gift.jpg,,
-Guest & Guestlist,Save invitation photos,4/1/2015,Find gorgeous invitation photos (search by color and style) in our gallery and save all of your favorites to your planner so that you can start to get an idea as to how you want your invites to look.,"1. Know wedding color and style
-2. Shape and Size
-3. Legible text and don't crowd the card",Fotavo Wedding Invitation - Pinterest|http://www.pinterest.com/fotavo/wedding-invitation/,"41,44",http://media-cache-ec0.pinimg.com/736x/c1/0b/12/c10b120d0ed218fd6a99c60d22cca74f.jpg,save_invitation_photos.jpg,,
 Guest & Guestlist,Block out hotel rooms,5/1/2015,"You might want to start with fewer rooms and then add more if needed (some hotels require you to pay for rooms that go un-booked). Also, don’t forget to add hotel contact info to your wedding website!","1. Estimate your rooms and ask hotels if the number makes sense
 2. Make sure the payment policy before you block the rooms
 3. Check the details of check-in, check-out time, transportation schedule if needed","Questions To Ask When Blocking Hotel Rooms For Your Wedding Guests - GroupTravel|http://grouptravel.org/wedding/questions-to-ask-when-blocking-hotel-rooms-for-your-wedding-guests/,Need a Hotel For Wedding Guests? - GroupTravel|http://grouptravel.org/need-a-hotel-for-wedding-guests/","11,41",,,,
-Guest & Guestlist,Book stationery designers,5/1/2015,The first impression that guests will receive of your wedding will come from the invitations.Designers help you embed your unique stories into stationery.,"1. Share your saved photos with the designers
+Guest & Guestlist,Book stationery designers,5/1/2015,The first impression that guests will receive of your wedding will come from the invitations.Designers help you embed your unique stories into stationery.,"1. Save and share your photos of stationery design with the designers
 2. Confirm the designs, paper, printing options and make payment
 3. Provide final wording and review proofs",10 Designers to Watch in 2014 - Stationary Trends|http://stationerytrendsmag.com/index.php/magazine/article/10-designers-to-watch-in-2014,"8,38,41,42,48",,,,
 Guest & Guestlist,Order save-the-dates,6/1/2015,"If you have a designer in mind (local or online), now is the time to order. Going the DIY route? Buy the supplies and start working. You'll want to mail them between six and eight months beforehand.","1. Save save-the-dates photos
@@ -179,12 +178,11 @@ Guest & Guestlist,Buy wedding party gifts,11/1/2015,"If the gifts don't already 
 2. Choose something useful and timeless 
 3. Buy gifts and wrap them with thank-yous
 4. Decide when to present the gifts",Bridesmaid Gifts: Shopping Tips & Etiquette - TheKnot|http://wedding.theknot.com/wedding-planning/bridal-party/articles/bridesmaid-gift-shopping-tips.aspx,"4,7,64,68",http://cdnpix.com/show/imgs/79121cf5f7be3949adfbc3d9c8563a77.jpg,,,
-Guest & Guestlist,Confirm guests,11/1/2015,Confirm the final guest party on the wedding day,"1. Keep aware someone will not attend and some will neglect the RSVP
+Guest & Guestlist,Work on seating,11/1/2015,"Seating assignments isn’t exactly an easy task. It's better to work the experienced ones, i.e. your parents, officiants and your married friends.","1. Keep aware someone will not attend and some will neglect the RSVP
 2. Make follow-up calls to invitees who haven't responded
-3. Notify the final number to caterer, venues, planner, cake baker",,"44,71",https://img0.etsystatic.com/004/0/6750043/il_fullxfull.389366054_sg36.jpg,,,
-Guest & Guestlist,Work on seating,11/1/2015,"Seating assignments isn’t exactly an easy task. It's better to work the experienced ones, i.e. your parents, officiants and your married friends.","1. Ask parents and fiance about any minefields
-2. Ask officiant about seating during ceremony
-3. Make it flexible","Creating A Seating Chart With No Tears - A Practical Wedding|http://apracticalwedding.com/2013/08/wedding-seating-chart-tips/,Fotavo Wedding Escort Cards - Pinterest|http://www.pinterest.com/fotavo/wedding-escort-cards/","50,71,52",http://lh6.ggpht.com/h26EaVfpemsAUjPQ4xpqEkqM3R1UrqzeweRZIAL58--bh5jlHVbmt_su1pqR8Csc8YuNlxXgGChnjQnoWUtKM8g=s0,,,
+3. Notify the final number to caterer, venues, planner, cake baker
+4. Work on seating with parents and partner
+5. Ask officiant about seating during ceremony","Creating A Seating Chart With No Tears - A Practical Wedding|http://apracticalwedding.com/2013/08/wedding-seating-chart-tips/,Fotavo Wedding Escort Cards - Pinterest|http://www.pinterest.com/fotavo/wedding-escort-cards/","50,71,52",https://img0.etsystatic.com/004/0/6750043/il_fullxfull.389366054_sg36.jpg,,,
 Guest & Guestlist,DIY escort cards,12/1/2015,"If you ordered escort cards, it's time to pick them up and organize them. If you're doing the DIY route, then now is the time to start working on them.","1. If you order escort cards, make sure you have extra 10 
 2. If you DIY escort cards, you shall start now. Keep in mind, you need extra 10 for in case",,"50,51,62",http://lh3.ggpht.com/uYDrGUzJLBwAeUOVD8gQbzvPoG19L6RDPOSUnrZxfWOtoUksEpawCMjQmdlnauv2Xia3egXFA4GB9M4p7vA5OA=s0,,,
 Guest & Guestlist,Finish thank-you notes,12/1/2015,"Ideally, you should try to get them done within two months of your wedding.","1. Buy thank you cards
@@ -209,16 +207,12 @@ Photography & Videography,Book videographers,4/1/2015,"A wedding video captures 
 Photography & Videography,Confirm shotlist,11/1/2015,Make sure every loved ones has a picture with you on the day.,"1. Getting ready
 2. Before the bride and groom see each other
 3. Important moments",Must-Take Wedding Photo Checklist - Real Simple|http://www.realsimple.com/weddings/ceremony/must-have-wedding-photos-00000000000226/,12,http://lh4.ggpht.com/MRfO0TO9dtDihum-bOWvbU2c3HwN0CSLLXCx7Ot-Dc0h87ayM9pVYgSn7wVo-xPlPXyvX5-JPLZyjxuXasZDwA8=s0,,,
-Flower & Decor,Save flower photos,5/1/2015,"From room decor to personal accessories, you will love these flowers along the day.","1. Save photos online and on magazines
-2. Ask around if anyone has allergies to particular flowers.",Flowers - Fotavo|http://www.fotavo.com/photos/photobvOQZSAJCiezaEckIXYs39Md68tBRmn05DgwKyxT,"8,59,60",http://lh4.ggpht.com/dE4gQ5e4PVTUsyYIM8MNgwzN-4Osv5IOXjCwaCXMSzR42EokZl2VJ0LEPW80Pdl7uX9hjLW7dJt75_WmQM85XY7M=s0,,,
 Flower & Decor,Book florist ,6/1/2015,"A qualified florist can help you narrow down your options, custom-design bouquets and display for you within the budget.","1. Interview 3-5 florists and see their samples
-2. Share saved photos and your wedding theme color with florists
+2. Save and share photos of floral design and your wedding theme color with florists
 3. Select all floral items and designs
 4. Give table, aisle, gazebo sizes 
 5. Schedule payment and sign contract
 6. Confirm date, time, delivery and locations with florist",Florist - Fotavo|http://www.fotavo.com/photos/photobvOQZSAJCiezaEckIXYs39Md68tBRmn05DgwKyxT,"8,71",http://lh4.ggpht.com/dE4gQ5e4PVTUsyYIM8MNgwzN-4Osv5IOXjCwaCXMSzR42EokZl2VJ0LEPW80Pdl7uX9hjLW7dJt75_WmQM85XY7M=s0,,,
-Flower & Decor,Save decor photos ,9/1/2015,,"1. Save photos online and on magazines
-2. Consider enhance some by candles, lanterns, etc",,"8,57,59",http://lh4.ggpht.com/PoLreeQtls29LDRnYD8rq3p9OhFw9fbwL_yiDlIxaegpzUHQk7UxO7saH-x1cwRQG0Hk-WxOg4KNvEIHpOkmxLk=s0,,,
 Flower & Decor,DIY projects I,10/1/2015,"Ask friends,family to join the fun projects!","1. Save decor photos for ceremony
 2. Check how to make them real
 3. Invite others to join the projects
@@ -267,14 +261,13 @@ Catering & Cake,Book caterer,5/1/2015,Treat your guests with a set of delicious 
 5. Ask for menu suggestions to fit your budget, style, season and allergy concerns
 6. Ask if anything is free, i.e. sodas, corkage fee
 7. Schedule the payment and sign the contract",Complete Guide To Hiring A Caterer - Our Dream Wedding|http://www.ourdreamwedding.com/index.cfm?page=wedding_articles_1&crid=60,"11,16,50,74",http://lh5.ggpht.com/xg45TxSH4Kyb1M4H41gi8dgRNPc8wuyYQptgiztbaKQNVlxg-GNNQnmYzoEm09LfTccHTDruLnDh0NVJsryqbA=s0,,,
-Catering & Cake,Save cake photos,7/1/2015,"Your cake design is your chance to drive home your favorite colors, flowers, and theme -- not to mention flavors! Look at tons of photos and save your favorites to show your cake baker.","1. Save the photos to show cake bakers later
-2. Don't feel like cake is the only option. How about pie, ice cream, or even donuts?","Fotavo Wedding Cake - Pinterest|http://www.pinterest.com/fotavo/wedding-cakes/,Top 5 Tips on How to Choose Your Wedding Cake - Bridal Musings|http://bridalmusings.com/2013/04/top-5-tips-on-how-to-choose-your-wedding-cake-the-sugared-saffron-cake-company/","11,16,73",http://lh6.ggpht.com/ZrRCoc3RoscJ2hAzzYv5E9NiY7F_eWcW9XJT0D8oL_qpYB7qWIY4Wq-W2Eh3rmOx0lQUBvg8VDQqJY_9CmJDBGI=s0,,,
 Catering & Cake,Book cake baker,8/1/2015,"Once you've had a chance to taste all the samples (yum), and talk design, decide on a baker. Request a contract and make sure all the details are there (like flavor and fillings). Then book!","1. Take catering menu, allergy history into consideration 
-2. Schedule cake tastings 
-3. Show your saved photos to them and check their previous work
-4. Check if the venue/cake baker requires a cake-cutting fee
-5. Confirm the delivery and rental items
-5. Schedule the payment and sign the contract ",How to Get a Lower Wedding Cake Price - WikiHow|http://www.wikihow.com/Get-a-Lower-Wedding-Cake-Price,"11,16,50,72,74",http://lh5.ggpht.com/0UOwCMPy_j5kVZ0QcMvC9EQ-Fo4dqjgnbbZB3yZgj-ig-BQyxOYqGEvfzTWBHz_UP7IgnkSPed05chkUODBQ22k=s0,,,
+2. Save photos of your dream cake
+3. Schedule cake tastings 
+4. Show your saved photos to them and check their previous work
+5. Check if the venue/cake baker requires a cake-cutting fee
+6. Confirm the delivery and rental items
+7. Schedule the payment and sign the contract ",How to Get a Lower Wedding Cake Price - WikiHow|http://www.wikihow.com/Get-a-Lower-Wedding-Cake-Price,"11,16,50,72,74",http://lh5.ggpht.com/0UOwCMPy_j5kVZ0QcMvC9EQ-Fo4dqjgnbbZB3yZgj-ig-BQyxOYqGEvfzTWBHz_UP7IgnkSPed05chkUODBQ22k=s0,,,
 Catering & Cake,Choose cakes,9/1/2015,Cake tasting time! ,"1. Visit cake bakers to taste cakes
 2. Choose cake flavors
 3. Choose a topper (online / in-store)",,"71,73",http://lh3.ggpht.com/8tPZQIPtrJ4AdkJ4VaEywdLcZHI5vR-Bem8d-i1pUsMbxp7P0TMCFW980lpy6bqvBiuu5gLd2ZKzZed6XkVdeAPb=s0,,,
