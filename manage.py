@@ -17,6 +17,12 @@ manager.add_command('refresh_data', RefreshDataCommand())
 manager.add_command('list_waiting_user', ListWaitingUserCommand())
 manager.add_command('delete_waiting_user', DeleteWaitingUserCommand())
 
+manager.add_command('list_user', ListUserCommand())
+manager.add_command('delete_user', DeleteUserCommand())
+manager.add_command('get_task_for_user', GetTaskForUserCommand())
+manager.add_command('update_task_for_user', UpdateTaskForUserCommand())
+manager.add_command('delete_task_for_user', DeleteTaskForUserCommand())
+
 
 if __name__ == "__main__":
     manager.run()

@@ -1,3 +1,4 @@
+from flask import json
 from flask.ext.script import Command, prompt
 
 from ..services import tasks
@@ -17,7 +18,7 @@ class CreateTaskCommand(Command):
 class ListTaskCommand(Command):
     def run(self):
         for task in tasks.all():
-            print '\n%s' % task.__dict__
+            print '\n%s' % json.dumps(task, indent=2)
 
 
 class DeleteTaskCommand(Command):
