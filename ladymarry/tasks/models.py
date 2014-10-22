@@ -21,7 +21,9 @@ TaskCategory = Enum('TaskCategory',
                     CateringAndCake=8,
                     SpeechAndToast=9,
                     Tradition=10,
-                    Honeymoon=11)
+                    Honeymoon=11,
+                    Reception=12,
+                    General=13)
 TaskCategory.addAlias('Parties & Entertainment', 'PartiesAndEntertainment')
 TaskCategory.addAlias('Attire & Beauty', 'AttireAndBeauty')
 TaskCategory.addAlias('Guest & Guestlist', 'GuestAndGuestlist')
@@ -94,6 +96,9 @@ class Task(TaskJsonSerializer, db.Model):
     category = db.Column(db.Integer(), default=0)
     owner_id = db.Column(db.Integer(),
                          db.ForeignKey('users.id', ondelete='cascade'))
+    required = db.Column(db.Boolean(), default=True)
+    # # How many hours required.
+    workload = db.Column(db.Integer(), default=0)
     # Position only makes sense within same category and month. Using float
     # to make it efficient to change order.
     position = db.Column(db.Float())

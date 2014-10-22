@@ -64,6 +64,9 @@ class Scheduler(object):
             for index, indices in scenario_index_to_task_indices.iteritems():
                 scenario = scenarios[index]
                 for k in indices:
+                    if k >= len(tasks):
+                        # TODO: May log warning.
+                        continue
                     tasks[k].scenarios.append(scenario)
 
         tasks = self._adjust_time(user.wedding_date, tasks)
@@ -77,6 +80,7 @@ class Scheduler(object):
         task_index_to_task_indices = {}
         i = 0
         for row in self._read_csv(current_app.config['TASK_DATA_FILE']):
+            required = (row[9].lower() == 'required')
             task = self._tasks.new(
                 category=row[0],
                 title=row[1],
@@ -85,14 +89,16 @@ class Scheduler(object):
                 tutorial=row[4],
                 resource=row[5],
                 image=('/server/img/%s' % row[8]) if row[8] else row[7],
-                position=i,
-                owner=user)
+                position=i if required else i + 100, # Lower optional tasks.
+                owner=user,
+                workload=int(row[10]),
+                required=required)
             assert self._is_task_valid(task)
                 
             tasks.append(task)
             if row[6]:
                 task_index_to_task_indices[i] = [int(k.strip()) - 2
-                                            for k in row[6].split(',')]
+                                                 for k in row[6].split(',')]
             i += 1
         return tasks, task_index_to_task_indices
 

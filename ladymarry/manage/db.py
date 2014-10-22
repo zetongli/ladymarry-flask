@@ -51,21 +51,33 @@ class RefreshDataCommand(Command):
     NOTE: Right now all tasks will be refreshed for existing users.
     """
     def run(self):
-        # Delete all tasks.
-        for user in users.all():
-            for task in user.tasks:
+        email = prompt('Enter email of user to be refreshed or \'all\' to ' +
+                       'refresh for everyone. (Updating scenario for single ' +
+                       'user is NOT supported.')
+        if email == 'all':
+            # Delete all tasks.
+            for user in users.all():
+                for task in user.tasks:
+                    tasks.delete(task)
+
+            # Delete all scenarios.
+            for scenario in scenarios.all():
+                scenarios.delete(scenario)
+
+            # Create scenarios.
+            scenarios.init_scenarios()
+
+            # Refresh data for each user.
+            for user in users.all():
+                tasks.schedule_tasks_for_user(user)
+        else:
+            u = users.first(email=email)
+            if not u:
+                print 'Invalid email.'
+                return
+            for task in u.tasks:
                 tasks.delete(task)
-
-        # Delete all scenarios.
-        for scenario in scenarios.all():
-            scenarios.delete(scenario)
-
-        # Create scenarios.
-        scenarios.init_scenarios()
-
-        # Refresh data for each user.
-        for user in users.all():
-            tasks.schedule_tasks_for_user(user)
+            tasks.schedule_tasks_for_user(u)
 
         print 'Success!'
         
