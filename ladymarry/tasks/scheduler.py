@@ -89,7 +89,7 @@ class Scheduler(object):
                 tutorial=row[4],
                 resource=row[5],
                 image=('/server/img/%s' % row[8]) if row[8] else row[7],
-                position=i if required else i + 100, # Lower optional tasks.
+                position=i if required else i + 1000, # Lower optional tasks.
                 owner=user,
                 workload=int(row[10]),
                 required=required)
