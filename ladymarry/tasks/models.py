@@ -10,27 +10,19 @@ TaskStatus = Enum('TaskStatus',
                   OnHold=2)
 
 TaskCategory = Enum('TaskCategory',
-                    Overall=0,
-                    PartiesAndEntertainment=1,
-                    Venue=2,
-                    AttireAndBeauty=3,
-                    GuestAndGuestlist=4,
-                    PhotographyAndVideography=5,
-                    FlowerAndDecor=6,
-                    Music=7,
-                    CateringAndCake=8,
-                    SpeechAndToast=9,
-                    Tradition=10,
-                    Honeymoon=11,
-                    Reception=12,
-                    General=13)
-TaskCategory.addAlias('Parties & Entertainment', 'PartiesAndEntertainment')
+                    General=0,
+                    Venue=1,
+                    AttireAndBeauty=2,
+                    GuestAndGuestlist=3,
+                    PhotographyAndVideography=4,
+                    FlowerAndDecor=5,
+                    Reception=6,
+                    Honeymoon=7)
+
 TaskCategory.addAlias('Attire & Beauty', 'AttireAndBeauty')
 TaskCategory.addAlias('Guest & Guestlist', 'GuestAndGuestlist')
 TaskCategory.addAlias('Photography & Videography', 'PhotographyAndVideography')
 TaskCategory.addAlias('Flower & Decor', 'FlowerAndDecor')
-TaskCategory.addAlias('Catering & Cake', 'CateringAndCake')
-TaskCategory.addAlias('Speech & Toast', 'SpeechAndToast')
 
 
 # Relation tables.
