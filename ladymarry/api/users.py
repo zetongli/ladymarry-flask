@@ -7,7 +7,7 @@ from werkzeug.datastructures import MultiDict
 from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
 from ..models import Scenario, Task
-from ..services import scenarios, tasks, users, waiting_users
+from ..services import *
 from . import route
 
 logging.basicConfig(level='INFO')
@@ -33,7 +33,7 @@ def register():
                                    last_name=form.last_name.data,
                                    wedding_date=form.wedding_date.data)
         if form.wedding_date.data:
-            tasks.schedule_tasks_for_user(user)
+            schedulers.schedule_tasks(user)
 
         # Generate JWT token for this user.
         user.token = generate_token(user)
@@ -57,7 +57,7 @@ def update():
 
         # Re-schedule tasks if wedding_date is updated.
         if form.wedding_date.data:
-            tasks.schedule_tasks_for_user(user)
+            schedulers.schedule_tasks(user)
         return user
     else:
         logger.info('Update fail: %s', form.errors)
@@ -107,9 +107,10 @@ def get_single_task(task_id):
 @route(bp, '/me/tasks/<task_id>', methods=['PUT'])
 @jwt_required()
 def update_task(task_id):
-    # Right now, series_tasks can't be updated.
+    # Right now, series_tasks, vendors can't be updated.
     params = request.json
     params.pop('series_tasks', None)
+    params.pop('vendors', None)
     return tasks.update(tasks.get_or_404(task_id), **params)
 
 @route(bp, '/me/tasks/<task_id>', methods=['DELETE'])

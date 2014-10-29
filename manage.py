@@ -23,6 +23,8 @@ manager.add_command('get_task_for_user', GetTaskForUserCommand())
 manager.add_command('update_task_for_user', UpdateTaskForUserCommand())
 manager.add_command('delete_task_for_user', DeleteTaskForUserCommand())
 
+manager.add_command('import_vendor', ImportVendorCommand())
+
 
 if __name__ == "__main__":
     manager.run()

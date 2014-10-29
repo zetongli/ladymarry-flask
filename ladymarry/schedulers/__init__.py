@@ -1,32 +1,25 @@
-import csv
 import datetime
 from collections import defaultdict
 
 from flask import current_app
 
-from .models import Scenario, Task
+from ..tasks import TasksService
+from ..utils import read_csv
+from ..vendors import VendorsService
+
+from ..models import Scenario, Task
 
 
 # TODO: Generalize to any roman numbers.
 ROMANS = [' I', ' II', ' III', ' IV', 'V']
 
 
-class Scheduler(object):
+class SchedulersService(object):
+    """This is a combination service for scheduling tasks. """
 
-    def __init__(self, scenarios, tasks):
-        self._scenarios = scenarios
-        self._tasks = tasks
-
-    def init_scenarios(self):
-        """This should be called only once to create Scenario objects. """
-        for row in self._read_csv(current_app.config['SCENARIO_DATA_FILE']):
-            if not row[0]:
-                continue
-            scenario = self._scenarios.create(
-                title=row[0],
-                when=row[1],
-                description=row[2],
-                image='/server/img/%s' % row[4])
+    def __init__(self):
+        self._tasks = TasksService()
+        self._vendors = VendorsService()
 
     def schedule_tasks(self, user, create_when_no_task=True):
         """Initializes all tasks for a new user. """
@@ -37,6 +30,7 @@ class Scheduler(object):
         if not tasks and create_when_no_task:
             scenarios, scenario_index_to_task_indices = self._read_scenarios()
             tasks, task_index_to_task_indices = self._read_tasks(user)
+            title_to_vendors = self._read_vendors()
 
             # Set up related tasks.
             # TODO: Enable this once content is correct.
@@ -69,6 +63,11 @@ class Scheduler(object):
                         continue
                     tasks[k].scenarios.append(scenario)
 
+            # Set up vendor tasks.
+            for i in xrange(len(tasks)):
+                for vendor in title_to_vendors.get(tasks[i].title, []):
+                    tasks[i].vendors.append(vendor)
+
         tasks = self._adjust_time(user.wedding_date, tasks)
         for task in tasks:
             self._tasks.save(task)
@@ -79,7 +78,7 @@ class Scheduler(object):
         # Map <task index, related task indices>.
         task_index_to_task_indices = {}
         i = 0
-        for row in self._read_csv(current_app.config['TASK_DATA_FILE']):
+        for row in read_csv(current_app.config['TASK_DATA_FILE']):
             required = (row[9].lower() == 'required')
             task = self._tasks.new(
                 category=row[0],
@@ -108,13 +107,27 @@ class Scheduler(object):
         # Map <scenario index, task indices>.
         scenario_index_to_task_indices = {}
         i = 0
-        for row in self._read_csv(current_app.config['SCENARIO_DATA_FILE']):
+        for row in read_csv(current_app.config['SCENARIO_DATA_FILE']):
             if not row[0] or not row[3]:
                 continue
             scenario_index_to_task_indices[i] = [int(k.strip()) - 2
                                                  for k in row[3].split(',')]
             i += 1
         return scenarios, scenario_index_to_task_indices
+
+    def _read_vendors(self):
+        """Returns (title, vendors). """
+        vendors = self._vendors.all()
+        name_to_vendor = {v.name: v for v in vendors}
+
+        title_to_vendors = defaultdict(list)
+        for row in read_csv(current_app.config['VENDOR_DATA_FILE']):
+            for i in [1, 7, 13]:
+                if not row[i]:
+                    break
+                title_to_vendors[row[0]].append(
+                    self._vendors.first(name=row[i]))
+        return title_to_vendors
 
     def _adjust_time(self, wedding_date, tasks):
         """NOTE: To reduce db requests, the input tasks are not necessarily
@@ -212,14 +225,5 @@ class Scheduler(object):
                     print 'Invalid resources: %s' % task.resource
                     return False
         return True
-
-    def _read_csv(self, filename):
-        with open(filename, 'r') as f:
-            reader = csv.reader(f)
-            num = 0
-            for row in reader:
-                if num > 0:
-                    yield row
-                num += 1
     
     

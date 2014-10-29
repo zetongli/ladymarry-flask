@@ -47,6 +47,13 @@ series_tasks = db.Table(
     db.Column('series_task_id', db.Integer(),
               db.ForeignKey('tasks.id', ondelete='cascade')))
 
+tasks_vendors = db.Table(
+    'tasks_vendors',
+    db.Column('task_id', db.Integer(),
+              db.ForeignKey('tasks.id', ondelete='cascade')),
+    db.Column('vendor_id', db.Integer(),
+              db.ForeignKey('vendors.id', ondelete='cascade')))
+
 
 # Scenario.
 class ScenarioJsonSerializer(JsonSerializer):
@@ -89,7 +96,7 @@ class Task(TaskJsonSerializer, db.Model):
     owner_id = db.Column(db.Integer(),
                          db.ForeignKey('users.id', ondelete='cascade'))
     required = db.Column(db.Boolean(), default=True)
-    # # How many hours required.
+    # How many hours required.
     workload = db.Column(db.Integer(), default=0)
     # Position only makes sense within same category and month. Using float
     # to make it efficient to change order.
@@ -120,3 +127,9 @@ class Task(TaskJsonSerializer, db.Model):
         secondaryjoin=(id == related_tasks.c.related_task_id),
         backref=db.backref('prev_related_tasks', lazy='dynamic'),
         lazy='dynamic')
+
+    vendors = db.relationship(
+        'Vendor',
+        secondary=tasks_vendors,
+        backref=db.backref('tasks', lazy='dynamic'))
+
