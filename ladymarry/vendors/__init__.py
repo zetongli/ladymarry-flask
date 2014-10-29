@@ -23,4 +23,5 @@ class VendorsService(Service):
                     location=row[i + 1],
                     price_range=row[i + 2],
                     profile_image=row[i + 3],
-                    cover_image=row[i + 4])
+                    cover_image=row[i + 4],
+                    website=row[i + 5])

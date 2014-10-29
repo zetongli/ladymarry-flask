@@ -15,3 +15,4 @@ class Vendor(VendorSerializer, db.Model):
     price_range = db.Column(db.String(255))
     profile_image = db.Column(db.String(255))
     cover_image = db.Column(db.String(255))
+    website = db.Column(db.String(255))
