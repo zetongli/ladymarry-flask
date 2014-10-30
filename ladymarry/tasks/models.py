@@ -120,6 +120,7 @@ class Task(TaskJsonSerializer, db.Model):
     tutorial = db.Column(db.Text())
     resource = db.Column(db.Text())
     image = db.Column(db.String(255))
+    image_compress = db.Column(db.String(255))
     related_tasks = db.relationship(
         'Task',
         secondary=related_tasks,
@@ -132,4 +133,3 @@ class Task(TaskJsonSerializer, db.Model):
         'Vendor',
         secondary=tasks_vendors,
         backref=db.backref('tasks', lazy='dynamic'))
-

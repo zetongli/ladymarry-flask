@@ -88,6 +88,9 @@ class SchedulersService(object):
                 tutorial=row[4],
                 resource=row[5],
                 image=('/server/img/%s' % row[8]) if row[8] else row[7],
+                image_compress=(
+                    '/server/img/%s' % self._get_compressed_image_name(
+                        row[8])) if row[8] else row[7],
                 position=i if required else i + 1000, # Lower optional tasks.
                 owner=user,
                 workload=int(row[10]),
@@ -225,5 +228,12 @@ class SchedulersService(object):
                     print 'Invalid resources: %s' % task.resource
                     return False
         return True
+
+    def _get_compressed_image_name(self, name):
+        """If name is 'abc.jpb', returns 'abc_compreseed.jpg'. """
+        if '.' not in name:
+            return None
+        index = name.rfind('.')
+        return name[: index] + '_compressed' + name[index:]
     
     
