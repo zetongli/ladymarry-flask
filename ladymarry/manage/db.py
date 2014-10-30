@@ -41,7 +41,7 @@ class SeedDBCommand(Command):
             first_name='Alice',
             last_name='Wang',
             wedding_date=datetime.date(now.year + 1, now.month, now.day))
-        tasks.schedule_tasks_for_user(user)
+        schedulers.schedule_tasks(user)
 
         print 'Success!'
 
@@ -69,7 +69,7 @@ class RefreshDataCommand(Command):
 
             # Refresh data for each user.
             for user in users.all():
-                tasks.schedule_tasks_for_user(user)
+                schedulers.schedule_tasks(user)
         else:
             u = users.first(email=email)
             if not u:
@@ -77,7 +77,7 @@ class RefreshDataCommand(Command):
                 return
             for task in u.tasks:
                 tasks.delete(task)
-            tasks.schedule_tasks_for_user(u)
+            schedulers.schedule_tasks(u)
 
         print 'Success!'
         

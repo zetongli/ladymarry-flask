@@ -1,24 +1,29 @@
 from dateutil import parser
 
+from flask import current_app
+
 from ..core import Service
+from ..utils import read_csv
 from .models import Scenario, Task, TaskStatus, TaskCategory
-from .scheduler import Scheduler
 
 
 class ScenariosService(Service):
     __model__ = Scenario
 
     def init_scenarios(self):
-        scheduler = Scheduler(self, TasksService())
-        scheduler.init_scenarios()
+        """This should be called only once to create Scenario objects. """
+        for row in read_csv(current_app.config['SCENARIO_DATA_FILE']):
+            if not row[0]:
+                continue
+            scenario = self.create(
+                title=row[0],
+                when=row[1],
+                description=row[2],
+                image='/server/img/%s' % row[4])
 
 
 class TasksService(Service):
     __model__ = Task
-
-    def schedule_tasks_for_user(self, user):
-        scheduler = Scheduler(ScenariosService(), self)
-        scheduler.schedule_tasks(user)
 
     def _preprocess_params(self, kwargs):
         """Override _preprocess_params to change enum string to int and
