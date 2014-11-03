@@ -93,7 +93,7 @@ class SchedulersService(object):
                         row[8])) if row[8] else row[7],
                 position=i if required else i + 1000, # Lower optional tasks.
                 owner=user,
-                workload=int(row[10]),
+#                workload=int(row[10]),
                 required=required)
             assert self._is_task_valid(task)
                 
