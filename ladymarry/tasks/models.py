@@ -15,8 +15,8 @@ TaskCategory = Enum('TaskCategory',
                     Guest=2,
                     PhotographyAndVideography=3,
                     AttireBeautyAndRing=4,
-                    FlowerAndDecor=5,
-                    FoodToastAndEntertainment=6,
+                    FoodToastAndEntertainment=5,
+                    FlowerAndDecor=6,
                     FinishUp=7)
 
 TaskCategory.addAlias('Get Started', 'GetStarted')
