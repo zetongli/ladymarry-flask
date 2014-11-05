@@ -3,7 +3,7 @@ from collections import defaultdict
 
 from flask import current_app
 
-from ..models import Scenario, Task
+from ..models import Task
 from ..tasks import TasksService
 from ..utils import read_csv
 from ..vendors import VendorsService
@@ -30,7 +30,6 @@ class TaskInitializer(object):
 
         tasks = user.tasks.all()
         if not tasks and create_when_no_task:
-            scenarios, scenario_index_to_task_indices = self._read_scenarios()
             tasks, task_index_to_task_indices = self._read_tasks(
                 user, task_file)
             title_to_vendors = self._read_vendors()
@@ -56,15 +55,6 @@ class TaskInitializer(object):
                     series_tasks = series[:]
                     del series_tasks[i]
                     task.series_tasks = series_tasks
-
-            # Set up scenario tasks.
-            for index, indices in scenario_index_to_task_indices.iteritems():
-                scenario = scenarios[index]
-                for k in indices:
-                    if k >= len(tasks):
-                        # TODO: May log warning.
-                        continue
-                    tasks[k].scenarios.append(scenario)
 
             # Set up vendor tasks.
             for i in xrange(len(tasks)):
@@ -106,20 +96,6 @@ class TaskInitializer(object):
                                                  for k in row[6].split(',')]
             i += 1
         return tasks, task_index_to_task_indices
-
-    def _read_scenarios(self):
-        """Returns (scenarios, scenario_index_to_task_indices). """
-        scenarios = Scenario.query.order_by(Scenario.id).all()
-        # Map <scenario index, task indices>.
-        scenario_index_to_task_indices = {}
-        i = 0
-        for row in read_csv(current_app.config['SCENARIO_DATA_FILE']):
-            if not row[0] or not row[3]:
-                continue
-            scenario_index_to_task_indices[i] = [int(k.strip()) - 2
-                                                 for k in row[3].split(',')]
-            i += 1
-        return scenarios, scenario_index_to_task_indices
 
     def _read_vendors(self):
         """Returns (title, vendors). """

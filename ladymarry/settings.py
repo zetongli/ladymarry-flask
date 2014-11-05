@@ -13,7 +13,6 @@ JWT_EXPIRATION_DELTA = timedelta(days=90)
 
 # Data configs.
 TASK_DATA_FILE = './ladymarry/data/task_data.csv'
-SCENARIO_DATA_FILE = './ladymarry/data/scenario_data.csv'
 VENDOR_DATA_FILE = './ladymarry/data/vendor_data.csv'
 
 DEFAULT_EXPORT_FILE = './ladymarry/data/export_task_data.csv'

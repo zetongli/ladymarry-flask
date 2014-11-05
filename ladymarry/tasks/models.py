@@ -36,13 +36,6 @@ related_tasks = db.Table(
     db.Column('related_task_id', db.Integer(),
               db.ForeignKey('tasks.id', ondelete='cascade')))
 
-tasks_scenarios = db.Table(
-    'tasks_scenarios',
-    db.Column('task_id', db.Integer(),
-              db.ForeignKey('tasks.id', ondelete='cascade')),
-    db.Column('scenario_id', db.Integer(),
-              db.ForeignKey('scenarios.id', ondelete='cascade')))
-
 series_tasks = db.Table(
     'series_tasks',
     db.Column('task_id', db.Integer(),
@@ -58,26 +51,10 @@ tasks_vendors = db.Table(
               db.ForeignKey('vendors.id', ondelete='cascade')))
 
 
-# Scenario.
-class ScenarioJsonSerializer(JsonSerializer):
-    __json_hidden__ = ['tasks']
-
-
-class Scenario(ScenarioJsonSerializer, db.Model):
-    __tablename__ = 'scenarios'
-
-    id = db.Column(db.Integer(), primary_key=True)
-    title = db.Column(db.String(255))
-    when = db.Column(db.Text())
-    description = db.Column(db.Text())
-    image = db.Column(db.String(255))
-
-
 # Task.
 class TaskJsonSerializer(JsonSerializer):
     __json_hidden__ = ['related_tasks',
                        'prev_related_tasks',
-                       'scenarios',
                        'owner']
 
     # For series tasks, we dump task id for each of them.
@@ -104,11 +81,6 @@ class Task(TaskJsonSerializer, db.Model):
     # Position only makes sense within same category and month. Using float
     # to make it efficient to change order.
     position = db.Column(db.Float())
-    scenarios = db.relationship(
-        'Scenario',
-        secondary=tasks_scenarios,
-        backref=db.backref('tasks', lazy='dynamic'),
-        lazy='dynamic')
     # This is used for task over multiple months. Series tasks don't include
     # itself.
     series_tasks = db.relationship(
