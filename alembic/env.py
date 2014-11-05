@@ -73,7 +73,8 @@ def run_migrations_online():
     connection = engine.connect()
     context.configure(
         connection=connection,
-        target_metadata=db.metadata
+        target_metadata=db.metadata,
+        compare_type=True
     )
 
     try:
