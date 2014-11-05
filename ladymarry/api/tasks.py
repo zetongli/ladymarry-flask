@@ -2,7 +2,7 @@ from dateutil import parser
 
 from flask import Blueprint, abort, request
 
-from ..services import scenarios, tasks
+from ..services import tasks
 from . import route
 
 
@@ -23,15 +23,3 @@ def get_single_task(task_id):
 def get_related_tasks(task_id):
     task = tasks.get_or_404(task_id)
     return task.related_tasks.all()
-
-
-scenario_bp = Blueprint('scenarios', __name__, url_prefix='/scenarios')
-
-
-@route(scenario_bp, '/')
-def get_all_scenarios():
-    return scenarios.all()
-
-@route(scenario_bp, '/<scenario_id>')
-def get_single_scenario(scenario_id):
-    return scenarios.get_or_404(scenario_id)

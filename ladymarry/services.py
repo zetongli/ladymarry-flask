@@ -1,10 +1,9 @@
 from .schedulers import SchedulersService
-from .tasks import ScenariosService, TasksService
+from .tasks import TasksService
 from .users import UsersService, WaitingUsersService
 from .vendors import VendorsService
 
 
-scenarios = ScenariosService()
 tasks = TasksService()
 users = UsersService()
 waiting_users = WaitingUsersService()

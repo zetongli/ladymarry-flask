@@ -4,22 +4,7 @@ from flask import current_app
 
 from ..core import Service
 from ..utils import read_csv
-from .models import Scenario, Task, TaskStatus, TaskCategory
-
-
-class ScenariosService(Service):
-    __model__ = Scenario
-
-    def init_scenarios(self):
-        """This should be called only once to create Scenario objects. """
-        for row in read_csv(current_app.config['SCENARIO_DATA_FILE']):
-            if not row[0]:
-                continue
-            scenario = self.create(
-                title=row[0],
-                when=row[1],
-                description=row[2],
-                image='/server/img/%s' % row[4])
+from .models import Task, TaskStatus, TaskCategory
 
 
 class TasksService(Service):

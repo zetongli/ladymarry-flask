@@ -6,7 +6,7 @@ from werkzeug.datastructures import MultiDict
 
 from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
-from ..models import Scenario, Task
+from ..models import Task
 from ..services import *
 from . import route
 
@@ -67,14 +67,8 @@ def update():
 @route(bp, '/me/tasks')
 @jwt_required()
 def get_tasks_for_user():
-    scenario_id = request.args.get('scenario_id', None)
-    if not scenario_id:
-        return users.current_user().tasks.order_by(
-            Task.task_date, Task.category, Task.position).all()
-    else:
-        return users.current_user().tasks.filter(
-            Task.scenarios.any(Scenario.id==scenario_id)).order_by(
-                Task.task_date, Task.category, Task.position).all()
+    return users.current_user().tasks.order_by(
+        Task.task_date, Task.category, Task.position).all()
 
 
 # TODO: Verify params.
@@ -82,17 +76,10 @@ def get_tasks_for_user():
 @jwt_required()
 def create_tasks_for_user():
     params = request.json
-
     # Check and set owner_id if needed.
     if 'owner_id' in params and params['owner_id'] != users.current_user().id:
         raise LadyMarryError('Cannot create task for other users.')
     params['owner_id'] = users.current_user().id
-
-    # Convert scenario ids into scenario object if given.
-    if 'scenarios' in params:
-        for i in xrange(len(params['scenarios'])):
-            params['scenarios'][i] = scenarios.get_or_404(
-                params['scenarios'][i])
 
     return tasks.create(**params)
 

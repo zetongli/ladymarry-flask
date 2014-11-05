@@ -29,9 +29,6 @@ class SeedDBCommand(Command):
     db is empty.
     """
     def run(self):
-        # Create scenarios.
-        scenarios.init_scenarios()
-
         # Create test user.
         now = datetime.datetime.now()
         user = users.register_user(
@@ -51,8 +48,7 @@ class RefreshDataCommand(Command):
     """
     def run(self):
         email = prompt('Enter email of user to be refreshed or \'all\' to ' +
-                       'refresh for everyone. (Updating scenario for single ' +
-                       'user is NOT supported.')
+                       'refresh for everyone')
         task_file = prompt('Input customized task file (e.g. ' +
                            './ladymarry/data/export_task_data.csv ' +
                            'or press Enter space to use default data')
@@ -64,13 +60,6 @@ class RefreshDataCommand(Command):
             for user in users.all():
                 for task in user.tasks:
                     tasks.delete(task)
-
-            # Delete all scenarios.
-            for scenario in scenarios.all():
-                scenarios.delete(scenario)
-
-            # Create scenarios.
-            scenarios.init_scenarios()
 
             # Refresh data for each user.
             for user in users.all():
