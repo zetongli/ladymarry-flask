@@ -53,8 +53,9 @@ class RefreshDataCommand(Command):
         email = prompt('Enter email of user to be refreshed or \'all\' to ' +
                        'refresh for everyone. (Updating scenario for single ' +
                        'user is NOT supported.')
-        task_file = prompt('Input customized task file or press Enter space ' +
-                           'to use default data')
+        task_file = prompt('Input customized task file (e.g. ' +
+                           './ladymarry/data/export_task_data.csv ' +
+                           'or press Enter space to use default data')
         task_file = (task_file if task_file.strip()
                      else current_app.config['TASK_DATA_FILE'])
 

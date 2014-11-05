@@ -28,9 +28,6 @@ class TaskInitializer(object):
         if not user:
             return
 
-        if not task_file:
-            task_file = current_app.config['TASK_DATA_FILE']
-
         tasks = user.tasks.all()
         if not tasks and create_when_no_task:
             scenarios, scenario_index_to_task_indices = self._read_scenarios()
