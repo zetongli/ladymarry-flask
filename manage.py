@@ -13,6 +13,7 @@ manager.add_command('create_task', CreateTaskCommand())
 manager.add_command('list_task', ListTaskCommand())
 manager.add_command('delete_task', DeleteTaskCommand())
 manager.add_command('refresh_data', RefreshDataCommand())
+manager.add_command('export_data', ExportDataCommand())
 
 manager.add_command('list_waiting_user', ListWaitingUserCommand())
 manager.add_command('delete_waiting_user', DeleteWaitingUserCommand())

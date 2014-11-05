@@ -24,7 +24,6 @@ class ClearDBCommand(Command):
         db.drop_all()
         db.create_all()
 
-
 class SeedDBCommand(Command):
     """This command is used to init data, test user in db assuming
     db is empty.
@@ -54,6 +53,11 @@ class RefreshDataCommand(Command):
         email = prompt('Enter email of user to be refreshed or \'all\' to ' +
                        'refresh for everyone. (Updating scenario for single ' +
                        'user is NOT supported.')
+        task_file = prompt('Input customized task file or press Enter space ' +
+                           'to use default data')
+        task_file = (task_file if task_file.strip()
+                     else current_app.config['TASK_DATA_FILE'])
+
         if email == 'all':
             # Delete all tasks.
             for user in users.all():
@@ -69,7 +73,7 @@ class RefreshDataCommand(Command):
 
             # Refresh data for each user.
             for user in users.all():
-                schedulers.schedule_tasks(user)
+                schedulers.schedule_tasks(user, task_file=task_file)
         else:
             u = users.first(email=email)
             if not u:
@@ -77,7 +81,18 @@ class RefreshDataCommand(Command):
                 return
             for task in u.tasks:
                 tasks.delete(task)
-            schedulers.schedule_tasks(u)
+            schedulers.schedule_tasks(u, task_file=task_file)
+
+        print 'Success!'
+
+class ExportDataCommand(Command):
+    def run(self):
+        email = prompt('Email of the exported user')
+        u = users.first(email=email)
+        if not u:
+            print 'Invalid email.'
+            return
+        schedulers.export_tasks(u, current_app.config['DEFAULT_EXPORT_FILE'])
 
         print 'Success!'
         
