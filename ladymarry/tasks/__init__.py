@@ -14,10 +14,12 @@ class TasksService(Service):
         """Override _preprocess_params to change enum string to int and
         parse datetime.
         """
-        kwargs['status'] = self._maybe_cast_enum_string_to_int(
-            TaskStatus, kwargs.get('status', 0))
-        kwargs['category'] = self._maybe_cast_enum_string_to_int(
-             TaskCategory, kwargs.get('category', 0))
+        if 'status' in kwargs:
+            kwargs['status'] = self._maybe_cast_enum_string_to_int(
+                TaskStatus, kwargs['status'])
+        if 'category' in kwargs:
+            kwargs['category'] = self._maybe_cast_enum_string_to_int(
+                TaskCategory, kwargs['category'])
 
         task_date = kwargs.get('task_date', None)
         if task_date and isinstance(task_date, basestring):

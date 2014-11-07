@@ -23,8 +23,9 @@ class TaskInitializer(object):
     def schedule_tasks(self,
                        user,
                        task_file,
-                       create_when_no_task=True):
-        """Initializes all tasks for a new user. """
+                       create_when_no_task):
+        """Initializes all tasks for a new user.
+        """
         if not user:
             return
 
