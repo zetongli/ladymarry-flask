@@ -6,7 +6,7 @@ from werkzeug.datastructures import MultiDict
 
 from ..core import LadyMarryError, LadyMarryFormError
 from ..forms import RegisterForm, UpdateForm
-from ..models import Task
+from ..models import Task, TaskStatus
 from ..services import *
 from . import route
 
@@ -27,13 +27,21 @@ def register():
         if users.first(email=form.email.data):
             raise LadyMarryError(
                 'Email %s is already registered.' % form.email.data)
-        user = users.register_user(email=form.email.data,
-                                   password=form.password.data,
-                                   first_name=form.first_name.data,
-                                   last_name=form.last_name.data,
-                                   wedding_date=form.wedding_date.data)
+
+        # TODO: Clean up this logic.
         if form.wedding_date.data:
+            user = users.register_user(email=form.email.data,
+                                       password=form.password.data,
+                                       first_name=form.first_name.data,
+                                       last_name=form.last_name.data,
+                                       wedding_date=form.wedding_date.data)
             schedulers.schedule_tasks(user)
+        else:
+            user = users.register_user(email=form.email.data,
+                                       password=form.password.data,
+                                       first_name=form.first_name.data,
+                                       last_name=form.last_name.data,
+                                       wedding_date=form.wedding_date.data)
 
         # Generate JWT token for this user.
         user.token = generate_token(user)
@@ -82,6 +90,16 @@ def create_tasks_for_user():
     params['owner_id'] = users.current_user().id
 
     return tasks.create(**params)
+
+#TODO: Verify params.
+@route(bp, '/me/tasks/categories-done', methods=['PUT'])
+@jwt_required()
+def mark_categories_done():
+    category_ids = request.json.get('category_ids', [])
+    tasks_in_categories = users.current_user().tasks.filter(
+        Task.category.in_(category_ids)).all()
+    for task in tasks_in_categories:
+        tasks.update(task, status=TaskStatus.Done.value)
 
 
 # Single task APIs.
