@@ -3,7 +3,7 @@ from collections import defaultdict
 
 from flask import current_app
 
-from ..models import Task, TaskCategory
+from ..models import Task
 from ..tasks import TasksService
 from ..utils import read_csv
 from ..vendors import VendorsService
