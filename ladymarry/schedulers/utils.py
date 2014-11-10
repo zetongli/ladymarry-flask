@@ -59,8 +59,10 @@ def _read_vendors(vendor_file):
         for i in [1, 7, 13]:
             if not row[i]:
                 break
-            title_to_vendors[row[0]].append(
-                _vendors.first(name=row[i]))
+            vendor = _vendors.first(name=row[i])
+            if vendor:
+                title_to_vendors[row[0]].append(vendor)
+
     return title_to_vendors
 
 def _is_task_valid(task):

@@ -4,7 +4,8 @@ from ..tasks import TasksService
 
 
 _REFRESHED_FIELDS = ['category', 'required', 'workload', 'description',
-                     'tutorial', 'resource', 'image', 'image_compress']
+                     'tutorial', 'resource', 'image', 'image_compress',
+                     'vendors']
 
 
 class TaskRefresher(object):
@@ -32,20 +33,4 @@ class TaskRefresher(object):
 
         kvs = {k: getattr(new_task, k) for k in _REFRESHED_FIELDS}
         self._tasks.update(old_task, **kvs)
-
-        # Update vendors.
-        old_ids = set([v.id for v in old_task.vendors])
-        new_ids = set([v.id for v in new_task.vendors])
-        stale = False
-        if len(old_ids) != len(new_ids):
-            stale = True
-        else:
-            for old_id in old_ids:
-                if old_id not in new_ids:
-                    stale = True
-                    break
-
-        if stale:
-            old_task.vendors[:] = new_task.vendors
-            self._tasks.save(old_task)
         
