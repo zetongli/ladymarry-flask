@@ -41,7 +41,7 @@ class SeedDBCommand(Command):
 
         print 'Success!'
 
-class RefreshDataCommand(Command):
+class ResetDataCommand(Command):
     """This command is used to refresh content data while keeping existing
     users.
     NOTE: Right now all tasks will be refreshed for existing users.
@@ -84,6 +84,23 @@ class ExportDataCommand(Command):
             return
         schedulers.export_tasks(u, current_app.config['DEFAULT_EXPORT_FILE'])
 
+        print 'Success!'
+
+class RefreshDataCommand(Command):
+    def run(self):
+        email = prompt('Enter email of user to be refreshed or \'all\' to ' +
+                       'refresh for everyone')
+
+        if email == 'all':
+            for user in users.all():
+                schedulers.refresh_tasks(user)
+        else:
+            u = users.first(email=email)
+            if not u:
+                print 'Invalid email.'
+                return
+
+            schedulers.refresh_tasks(u)
         print 'Success!'
         
             
